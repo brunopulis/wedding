@@ -4,7 +4,6 @@ import Header from '../components/header.astro';
 import WeddingInfo from '../components/wedding-info.astro';
 import Hero from '../components/hero.astro';
 import Countdown from '../components/countdown.astro';
-import Card from '../components/Card.astro';
 import About from '../components/about.astro';
 import GalleryArea from '../components/gallery-area.astro';
 import Gift from '../components/gift.astro';
@@ -16,8 +15,8 @@ import Footer from '../components/footer.astro';
 
 <Layout title="Mariana e Bruno">
 	<Header />
-	<Hero />
-	<main>
+	<main class="site-main" id="main-content">
+		<Hero />
 		<About />
 		<WeddingInfo />
 		<Countdown />
