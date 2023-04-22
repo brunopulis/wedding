@@ -11,7 +11,8 @@
     "clean": "rimraf dist .astro node_modules"
   },
   "dependencies": {
-    "astro": "^2.3.0"
+    "astro": "^2.3.0",
+    "astro-icon": "^0.8.0"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0",
