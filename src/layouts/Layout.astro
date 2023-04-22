@@ -7,16 +7,64 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+
+		<link href="https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700|Playfair+Display:400,500,600,700,800,900|Roboto:300,400,500,700&display=swap"> 
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="/css/flaticon.css">
+		<link rel="stylesheet" href="/css/slicknav.css">
+		<link rel="stylesheet" href="/css/animate.min.css">
+		<link rel="stylesheet" href="/css/magnific-popup.css">
+		<link rel="stylesheet" href="/css/fontawesome-all.min.css">
+		<link rel="stylesheet" href="/css/themify-icons.css">
+		<link rel="stylesheet" href="/css/slick.css">
+		<link rel="stylesheet" href="/css/nice-select.css">
+		<link rel="stylesheet" href="/css/style.css">
 		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
+
+		<script src="/js/vendor/modernizr-3.5.0.min.js" is:inline></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="/js/vendor/jquery-1.12.4.min.js" is:inline></script>
+		<script src="/js/popper.min.js" is:inline></script>
+		<script src="/js/bootstrap.min.js" is:inline></script>
+		<!-- Jquery Mobile Menu -->
+		<script src="/js/jquery.slicknav.min.js" is:inline></script>
+		
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+		<!-- Date Picker -->
+		<!-- One Page, Animated-HeadLin -->
+		<script src="/js/wow.min.js" is:inline></script>
+		<script src="/js/animated.headline.js" is:inline></script>
+		<script src="/js/jquery.magnific-popup.js"></script>
+		
+		<!-- Scrollup, nice-select, sticky -->
+		<script src="/js/jquery.scrollUp.min.js" is:inline></script>
+		<script src="/js/jquery.nice-select.min.js" is:inline></script>
+		<script src="/js/jquery.sticky.js" is:inline></script>
+		
+		<!-- counter , waypoint -->
+		<script src="/js/jquery.counterup.min.js" is:inline></script>
+		<script src="/js/waypoints.min.js" is:inline></script>
+		
+		<!-- contact js -->
+		<script src="/js/contact.js"></script>
+		<script src="/js/jquery.form.js"></script>
+		<script src="/js/jquery.validate.min.js"></script>
+		<script src="/js/mail-script.js"></script>
+		<script src="/js/jquery.ajaxchimp.min.js"></script>
+		
+		<!-- Jquery Plugins, main Jquery -->   
+		<script src="/js/plugins.js" is:inline></script>
+		<script src="/js/main.js" is:inline></script>
 	</body>
 </html>
 <style is:global>

@@ -1,0 +1,78 @@
+---
+import logo from "/images/logo/logo.png";
+import type { NavItem } from "../types";
+
+const navItems: Array<NavItem> = [
+  { title: "Home", url: "#" },
+  { title: "Sobre nós", url: "#" },
+  { title: "Galeria", url: "#" },
+  { title: "Recados", url: "#" },
+];
+---
+
+<header>
+  <div class="header-area">
+    <div class="main-header header-sticky">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Logo -->
+          <div class="col-xl-2 col-lg-2">
+            <div class="logo">
+              <a href="index.html">
+                <img src={logo} alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="col-xl-10 col-lg-10 col-md-10">
+            <!-- Main-menu -->
+            <div class="main-menu f-right d-none d-lg-block">
+              <nav>
+                <ul id="navigation">
+                  {
+                    navItems.map(({ title, url }) => (
+                      <li>
+                        <a href={url}>{title}</a>
+                      </li>
+                    ))
+                  }
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!-- Mobile Menu -->
+          <div class="col-12">
+            <div class="mobile_menu d-block d-lg-none">
+              <div class="slicknav_menu">
+                <a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed" style="outline: none;">
+                  <span class="slicknav_menutxt">MENU</span>
+                  <span class="slicknav_icon">
+                    <span class="slicknav_icon-bar"></span>
+                    <span class="slicknav_icon-bar"></span>
+                    <span class="slicknav_icon-bar"></span>
+                  </span>
+                </a>
+                
+                <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu">
+                  <li>
+                    <a href="index.html" role="menuitem" tabindex="-1"> home</a>
+                  </li>
+                  <li>
+                    <a href="about.html" role="menuitem" tabindex="-1">About</a>
+                  </li>
+                  <li>
+                    <a href="gallery.html" role="menuitem" tabindex="-1"
+                      >gallery</a>
+                  </li>
+                  <li>
+                    <a href="booking.html" role="menuitem" tabindex="-1"
+                      >Guestbook</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
