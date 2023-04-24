@@ -1,0 +1,204 @@
+---
+import Layout from '../layouts/Page.astro';
+import HeroInner from '../components/hero-inner.astro';
+import Icon from 'astro-icon';
+import About from '../components/about.astro';
+import RegistryGift from '../components/registry-gift.astro';
+import Map from '../components/map.astro';
+
+let hotels = [
+  {
+    name: 'Atelier Molinaro',
+    link: 'https://bit.ly/atelier-molinaro',
+    location: 'Próximo ao evento'
+  },
+
+  {
+    name: 'Kastel Vila Bavaria',
+    link: 'https://bit.ly/vila-bavaria',
+    location: 'Centro'
+  },
+
+  {
+    name: 'Pousada Palácio de Cristal',
+    link: 'https://bit.ly/3KeF9Fk',
+    location: 'Centro'
+  },
+
+  {
+    name: 'Pousada Dom Petrópolis',
+    link: 'http://www.pousadadompetropolis.com.br/',
+    location: 'Centro'
+  },
+  {
+    name: 'Pousada Magister',
+    link: 'http://petropolis.pousadamagister.com.br/',
+    location: 'Centro'
+  },
+  {
+    name: 'Hotel Casablanca Palace',
+    link: 'http://www.casablancahotel.com.br/casablancapalace/',
+    location: 'Centro'
+  },
+  {
+    name: 'Hotel Casablanca Center',
+    link: 'https://www.booking.com/hotel/br/casablanca-center.pt-br.html',
+    location: 'Centro'
+  },
+  {
+    name: 'Casablanca Koeler',
+    link: 'https://www.booking.com/hotel/br/casablanca-koeler.pt-br.html',
+    location: 'Centro'
+  },
+  {
+    name: 'Pousada Catedral Petrópolis',
+    link: 'https://www.pousadacatedralpetropolis.com.br/',
+    location: 'Centro'
+  },
+  {
+    name: 'Hotel Reggia Catarina',
+    link: 'https://www.reggiacatarina.com.br/',
+    location: 'Centro'
+  },
+  {
+    name: 'Casablanca Imperial',
+    link: 'https://bit.ly/casablanca-imperial',
+    location: 'Centro'
+  },
+  {
+    name: 'HMG Suítes Inn Centro Histórico',
+    link: 'https://www.booking.com/hotel/br/ace-suites-business.pt-br.html',
+    location: 'Centro'
+  },
+  {
+    name: 'York Hotel',
+    link: 'https://www.hotelyork.com.br/',
+    location: 'Centro'
+  },
+  {
+    name: 'Kastel Grão Pará',
+    link: 'https://www.hotelgraoparapetropolis.com.br/default.asp',
+    location: 'Centro'
+  },
+  {
+    name: 'Hotel Orleans',
+    link: 'https://hotelorleans.com.br/',
+    location: 'Centro'
+  },
+  {
+    name: 'Princesa Isabel Pousada',
+    link: 'https://www.pousadaprincesaisabel.com.br/',
+    location: 'Centro'
+  },
+  {
+    name: 'ibis Petropolis',
+    link: 'https://bit.ly/ibis-petropolis',
+    location: 'Distante'
+  },
+  {
+    name: 'Pousada Imperial Koeler',
+    link: 'https://www.pousadaimperialkoeler.com.br/',
+    location: 'Centro'
+  }
+]
+
+const { title } = Astro.props;
+---
+
+<Layout title="Mariana e Bruno - Indicações">
+  <HeroInner title="Indicações" />
+
+  <section class="" id="accommodation" aria-labelledby="accommodation-title">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-xl-12">
+          <h2 class="section-tittle text-center mb-80" id="accomodation-title">Hospedagens</h2>
+          <p>Selecionamos algumas hospedagens próximas ao eventos.</p>
+          <p>Separamos em duas categorias: <strong>Hotéis</strong> e <strong lang="en">Airbnb</strong></p>
+        </div>
+
+        <div class="col-xs-12">
+          <h3 class="section-tittle text-center mb-80">Hotéis e Pousadas</h3>
+
+          <table class="table table-striped table-bordered">
+            <caption>Hotéis e pousadas em Petropólis</caption>
+            <thead>
+              <tr>
+                <th scope="col">Estabelecimento</th>
+                <th scope="col">Link</th>
+                <th scope="col">Localização</th>
+              </tr> 
+            </thead>
+            <tbody>
+              {
+                hotels.map(hotel =>(
+                  <tr>
+                    <th scope="row">{ hotel.name }</th>
+                    <td>
+                      <a class="accommodation__link" href={ hotel.link }>
+                        consultar disponibilidade do local 
+                        <Icon aria-hidden="true" name="mdi:external-link" width="14" heigh="14" />
+                      </a>
+                    </td>
+                    <td>{ hotel.location }</td>
+                  </tr>
+                ))
+              }
+            </tbody> 
+          </table>
+        </div>
+
+        <div class="col-xs-12">
+          <h3>Airbnb</h3>
+
+          <table class="table table-striped table-bordered">
+            <caption>Hotéis e pousadas em Petropólis</caption>
+            <thead>
+              <tr>
+                <th scope="col">Estabelecimento</th>
+                <th scope="col">Link</th>
+                <th scope="col">Proximidade ao evento</th>
+              </tr> 
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Atelier Molinaro</th>
+                <td><a href="https://bit.ly/atelier-molinaro">consultar disponibilidade do local</a></td>
+                <td>Próximo ao evento</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Villa Violeta</th>
+                <td><a href="https://bit.ly/atelier-molinaro">consultar disponibilidade do local</a></td>
+                <td>Centro</td>
+              </tr>
+            </tbody> 
+          </table>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+  <section class="" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <h2 id="services-title">Serviços</h2>
+        </div>
+      </div>
+    </div>
+  </section> 
+
+  <section class="" id="entertainment" aria-labelledby="entertainment-title">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <h2 id="entertainment-title">O que visitar em Petropólis</h2>
+        </div>
+      </div>
+    </div>
+  </section> 
+  <About />
+  <RegistryGift />
+  <Map />
+</Layout>
