@@ -1,17 +1,15 @@
-<section class="section" id="hero-section" aria-labelledby="hero-section-title">
-  <div class="slider-area">
-    <div class="slider-active">
-      <div class="single-slider slider-height hero-overly d-flex align-items-center">
-        <div class="container">
-          <div class="row d-flex align-items-center">
-            <div class="col-xl-8 col-lg-6 col-md-8">
-              <div class="hero__caption">
-                <span data-animation="fadeInLeft" data-delay=".3s">14 de outubro</span>
-                <h1 data-animation="fadeInLeft" data-delay=".5s" data-duration="2000ms">
-                  Bruno <strong> &</strong> Mariana
-                </h1>
-                <p data-animation="fadeInLeft" data-delay=".9s">vão se casar</p>
-              </div>
+<section class="hero" id="hero-section" aria-labelledby="hero-section-title">
+  <div class="hero-wrapper">
+    <div class="single-slider slider-height hero-overly d-flex align-items-center">
+      <div class="container">
+        <div class="row d-flex align-items-center">
+          <div class="col-xl-8 col-lg-6 col-md-8">
+            <div class="overflow-hidden">
+              <span class="hero__date animate__animated animate__fadeInLeft" data-animation="fadeInLeft" data-delay=".3s">14 de outubro</span>
+              <h1 class="animate__animated animate__fadeInLeft hero__title" data-animation="fadeInLeft" data-delay=".5s" data-duration="2000ms">
+                Bruno <strong aria-label="e">&amp;</strong> Mariana
+              </h1>
+              <p class="hero__text animate__animated animate__fadeInLeft" data-animation="fadeInLeft" data-delay=".9s">vão se casar</p>
             </div>
           </div>
         </div>
@@ -19,3 +17,178 @@
     </div>
   </div>
 </section>
+
+<style lang="scss">
+.slider-height {
+  height: 980px;
+
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    height: 600px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    height: 500px;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    height: 500px;
+  }
+
+  @media (max-width: 575px) {
+    height: 350px;
+  }
+}
+.hero-wrapper {
+  background-image: url(../images/hero/homeHero_1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.hero__date {
+  color: #fff;
+  display: inline-block;
+  font-family: var(--font-3);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  line-height: 2.1;
+  padding-left: 50px;
+  position: relative;
+  text-transform: uppercase;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-image: url(../images/hero/hero_shape1.png);
+    width: 36px;
+    height: 45px;
+    background-repeat: no-repeat;
+  }
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    font-size: 18px;
+    margin-bottom: 7px;
+  }
+  @media (max-width: 575px) {
+    font-size: 18px;
+    margin-bottom: 7px;
+  }
+}
+.hero__title {
+  color: #fff;
+  font-family: var(--font-1);
+  font-size: 99px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  margin-bottom: 30px;
+  position: relative;
+  text-transform: capitalize;
+  &::before {
+    content: "";
+    position: absolute;
+    right: 34px;
+    top: -17px;
+    background-image: url(../images/hero/hero_shape2.png);
+    width: 80px;
+    height: 84px;
+    background-repeat: no-repeat;
+
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      right: 0;
+      top: -39px;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      right: -2px;
+      top: -42px;
+    }
+
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+      display: none;
+    }
+
+    @media (max-width: 575px) {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    font-size: 50px;
+    line-height: 1.2;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    font-size: 52px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    font-size: 47px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 33px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  strong {
+    font-style: italic;
+    font-size: 49px;
+    font-family: var(--font-1);
+    font-weight: 400;
+    padding: 0 7px 0 4px;
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      font-size: 40px;
+    }
+
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+      font-size: 25px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 20px;
+    }
+  }
+}
+.hero__text {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 23px;
+  letter-spacing: 0.2em;
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    font-size: 15px;
+  }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 13px;
+  }
+}
+.hero-overly {
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background-repeat: no-repeat;
+  }
+}
+</style>

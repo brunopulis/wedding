@@ -1,22 +1,60 @@
-@import 'animate.css';
-@import 'variables';
-@import 'mixins';
+// Base
+// ============================================================
+
+@import "base/variables";
+
+// Frameworks
+// ============================================================
+
+@import "animate.css";
+@import "bootstrap/scss/bootstrap";
+
+// Helpers
+// ============================================================
+
+// @import "helpers/functions";
+@import "helpers/mixins";
+@import "helpers/commons";
+
+// Components
+// ============================================================
+
+@import 'components/c-count-down';
+// @import 'components/c-hero';
+
+// Layout
+// ============================================================
+
+// @import "layout/header";
+// @import "layout/navigation";
+// @import "layout/hero";
+// @import "layout/footer";
+
+// Pages
+// ============================================================
+
+// Vendor
+// ============================================================
+
+// @import "third-party/font-awesome/fontawesome";
+// @import "third-party/animate";
+// @import "third-party/iconmoon";
+// @import "third-party/slick/slick";
+// @import "third-party/slick/accessible-slick-theme";
+// @import "third-party/magnific-popup";
+// @import "third-party/owl.theme.default";
+// @import "third-party/themify-icons";
+
 @import 'overlay';
-@import 'common';
 @import 'color';
 @import 'extra';
 
 // Homepage1
-@import 'headerMenu';
-@import 'h1-hero';
 @import 'our-story';
 @import 'services_section';
-@import 'count_down';
 @import 'gallery';
 @import 'gallery_2';
 @import 'gift';
-@import 'h1-contact';
-@import 'footer';
 
 // inner Page
 @import 'services';

@@ -19,7 +19,7 @@
         display: block;
         font-weight: 600;
         text-transform: uppercase;
-        font-family: $font_3;
+        font-family: var(--font-3);
       }
 
       p {
@@ -30,7 +30,7 @@
         padding: 0;
         font-weight: 600;
         text-transform: uppercase;
-        font-family: $font_3;
+        font-family: var(--font-3);
       }
     }
   }
