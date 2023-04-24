@@ -20,6 +20,7 @@
   "devDependencies": {
     "accessible-astro-components": "^1.6.6",
     "cz-conventional-changelog": "^3.3.0",
+    "postcss-pxtorem": "^6.0.0",
     "prettier": "^2.8.8",
     "prettier-plugin-astro": "^0.8.0",
     "rimraf": "^5.0.0",
