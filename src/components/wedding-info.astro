@@ -1,21 +1,24 @@
 ---
 import Icon from 'astro-icon';
 ---
-<section class="pricing-card-area section-padding30 section-bg" data-background="/images/gallery/section_bg1.png">
+<section class="wedding-info pricing-card-area section-bg">
   <div class="container">
     <div class="row d-flex justify-content-center">
       <div class="col-lg-8">
         <div class="section-tittle text-center mb-70">
-          <h2>Informações do casamento</h2>
-          <img src="/images/gallery/tittle_img.png" alt="" />
-          <p>
-            Quisque nec facilisis sem. In at commodo velit. Aliquam tempor
-            volutpat laoreet. Quisque non tellus eleifend arcu gravida aliquam.
-            Vivamus quis consequat nisl
-          </p>
+          <h2 class="wedding-info__title">Informações do casamento</h2>
+
+          <div class="wedding-info__content">
+            <p>
+              Quisque nec facilisis sem. In at commodo velit. Aliquam tempor
+              volutpat laoreet. Quisque non tellus eleifend arcu gravida aliquam.
+              Vivamus quis consequat nisl
+            </p>
+          </div>
         </div>
       </div>
     </div>
+
     <div class="row align-items-center">
       <div class="col-xl-4 col-lg-6 col-md-6">
         <div class="single-card text-center mb-30">
@@ -63,3 +66,85 @@ import Icon from 'astro-icon';
     </div>
   </div>
 </section>
+
+<style lang="scss">
+  .pricing-card-area {
+  .single-card {
+    background: #fff;
+    padding: 70px 25px;
+    padding-bottom: 0;
+    box-shadow: 0px 0px 9px 0px rgba(131, 93, 248, 0.07);
+    transition: all ease 0.3s;
+    border: 1px solid transparent;
+
+    .card-top {
+      border-bottom: 2px solid#f4f4f4;
+      margin-bottom: 46px;
+
+      // icon
+      span {
+        font-size: 50px;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        color: #2e3c40;
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 26px;
+      }
+    }
+
+    .card-bottom {
+      ul {
+        li {
+          color: #636363;
+          font-weight: 300;
+          margin-bottom: 26px;
+          font-size: 16px;
+
+          &:last-child {
+            margin-bottom: 0px;
+          }
+
+          i {
+            padding-right: 7px;
+          }
+        }
+      }
+    }
+
+    .card-buttons {
+      transition: all ease 0.3s;
+      visibility: hidden;
+      opacity: 0;
+
+    }
+
+    // hover
+    &.active {
+      padding-bottom: 70px;
+      border: 1px solid #ff2828;
+
+      .card-buttons {
+        visibility: visible;
+        opacity: 1;
+      }
+
+    }
+
+    &:hover {
+      box-shadow: 0px 10px 30px 0px rgba(133, 66, 189, 0.1);
+      border: 1px solid #ff2828;
+      padding-bottom: 70px;
+
+      .card-buttons {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+</style>

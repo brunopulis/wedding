@@ -1,12 +1,17 @@
 @import '../color';
 
 :root {
-  --font-1: 'Playfair Display, serif';
+  --font-1: 'Open, sans-serif';
   --font-2: 'Roboto, sans-serif';
   --font-3: 'Barlow, sans-serif';
+  --olive: #6d7e5f;
+  --olive-light: #b5bda1;
+  --standard: #e5e7e1;
+  --white: #fff;
+  --purple: #a06da4;
+  --black: #1b1b1b;
   --theme-black: #1b1b1b;
   --heading_color2: #112e41;
-  --white_color: #fff;
   --laptop: 'only screen and (min-width: 1200px) and (max-width: 1600px)';
   --lg: 'only screen and (min-width: 992px) and (max-width: 1199px)';
   --md: 'only screen and (min-width: 768px) and (max-width: 991px)';
@@ -31,7 +36,7 @@
 
 // Element Page btn
 .boxed-btn {
-  background: var(--white_color);
+  background: var(--white);
   color: $theme-color !important;
 
   display: inline-block;

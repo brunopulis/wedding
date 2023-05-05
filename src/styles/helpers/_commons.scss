@@ -1,11 +1,9 @@
-/* 1. Theme default css */
-
-@import url('https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700|Playfair+Display:400,500,600,700,800,900|Roboto:300,400,500,700&display=swap');
-@import '../base/variables';
-
+// =======================================================================
+// Commons
+// =======================================================================
 
 body {
-  font-family: var(--font-2);
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -17,23 +15,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-1);
   color: $heading-color;
-
-  margin-top: 0;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 500;
+  margin-top: 0;
   text-transform: normal;
 }
 
 p {
-  font-family: var(--font-2);
   color: $font_color1;
-
   font-size: 16px;
+  font-weight: normal;
   line-height: 30px;
   margin-bottom: 15px;
-  font-weight: normal;
 }
 
 // background-image
@@ -91,7 +86,7 @@ a:hover {
 a:focus,
 a:hover,
 .portfolio-cat a:hover,
-.footer -menu li a:hover {
+.footer-menu li a:hover {
   text-decoration: none;
 }
 
