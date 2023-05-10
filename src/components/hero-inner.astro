@@ -1,20 +1,21 @@
 ---
 interface Props {
   title: string;
+  content: string;
 }
 
-const { title } = Astro.props;
+const { title, content } = Astro.props;
 ---
 
-<section aria-labelledby="indications-title">
+<section aria-labelledby="hero-title">
   <div class="slider-area2">
     <div class="single-slider slider-height2  hero-overly d-flex align-items-center">
       <div class="container">
         <div class="row">
           <div class="col-xl-12">
             <div class="hero-cap">
-              <h1 class="h2 text-white" id="indications-title">{title}</h1>
-              <p class="text-white">Separamos excelentes locais para hospedagem e passeios. <br /> Então aproveite sua estadia em Petropólis.</p>
+              <h1 class="h1 text-white" id="hero-title">{title}</h1>
+              <p class="text-white">{content}</p>
             </div>
           </div>
         </div>
