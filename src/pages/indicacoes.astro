@@ -2,203 +2,507 @@
 import Layout from '../layouts/Page.astro';
 import HeroInner from '../components/hero-inner.astro';
 import Icon from 'astro-icon';
-import About from '../components/about.astro';
-import RegistryGift from '../components/registry-gift.astro';
+import Attractions from '../components/attractions.astro';
 import Map from '../components/map.astro';
 
 let hotels = [
-  {
-    name: 'Atelier Molinaro',
-    link: 'https://bit.ly/atelier-molinaro',
-    location: 'Próximo ao evento'
-  },
+	{
+		name: 'Atelier Molinaro',
+		link: 'https://bit.ly/atelier-molinaro',
+		location: 'Próximo ao evento',
+	},
 
-  {
-    name: 'Kastel Vila Bavaria',
-    link: 'https://bit.ly/vila-bavaria',
-    location: 'Centro'
-  },
+	{
+		name: 'Kastel Vila Bavaria',
+		link: 'https://bit.ly/vila-bavaria',
+		location: 'Centro',
+	},
 
-  {
-    name: 'Pousada Palácio de Cristal',
-    link: 'https://bit.ly/3KeF9Fk',
-    location: 'Centro'
-  },
+	{
+		name: 'Pousada Palácio de Cristal',
+		link: 'https://bit.ly/3KeF9Fk',
+		location: 'Centro',
+	},
 
-  {
-    name: 'Pousada Dom Petrópolis',
-    link: 'http://www.pousadadompetropolis.com.br/',
-    location: 'Centro'
-  },
-  {
-    name: 'Pousada Magister',
-    link: 'http://petropolis.pousadamagister.com.br/',
-    location: 'Centro'
-  },
-  {
-    name: 'Hotel Casablanca Palace',
-    link: 'http://www.casablancahotel.com.br/casablancapalace/',
-    location: 'Centro'
-  },
-  {
-    name: 'Hotel Casablanca Center',
-    link: 'https://www.booking.com/hotel/br/casablanca-center.pt-br.html',
-    location: 'Centro'
-  },
-  {
-    name: 'Casablanca Koeler',
-    link: 'https://www.booking.com/hotel/br/casablanca-koeler.pt-br.html',
-    location: 'Centro'
-  },
-  {
-    name: 'Pousada Catedral Petrópolis',
-    link: 'https://www.pousadacatedralpetropolis.com.br/',
-    location: 'Centro'
-  },
-  {
-    name: 'Hotel Reggia Catarina',
-    link: 'https://www.reggiacatarina.com.br/',
-    location: 'Centro'
-  },
-  {
-    name: 'Casablanca Imperial',
-    link: 'https://bit.ly/casablanca-imperial',
-    location: 'Centro'
-  },
-  {
-    name: 'HMG Suítes Inn Centro Histórico',
-    link: 'https://www.booking.com/hotel/br/ace-suites-business.pt-br.html',
-    location: 'Centro'
-  },
-  {
-    name: 'York Hotel',
-    link: 'https://www.hotelyork.com.br/',
-    location: 'Centro'
-  },
-  {
-    name: 'Kastel Grão Pará',
-    link: 'https://www.hotelgraoparapetropolis.com.br/default.asp',
-    location: 'Centro'
-  },
-  {
-    name: 'Hotel Orleans',
-    link: 'https://hotelorleans.com.br/',
-    location: 'Centro'
-  },
-  {
-    name: 'Princesa Isabel Pousada',
-    link: 'https://www.pousadaprincesaisabel.com.br/',
-    location: 'Centro'
-  },
-  {
-    name: 'ibis Petropolis',
-    link: 'https://bit.ly/ibis-petropolis',
-    location: 'Distante'
-  },
-  {
-    name: 'Pousada Imperial Koeler',
-    link: 'https://www.pousadaimperialkoeler.com.br/',
-    location: 'Centro'
-  }
-]
+	{
+		name: 'Pousada Dom Petrópolis',
+		link: 'http://www.pousadadompetropolis.com.br/',
+		location: 'Centro',
+	},
+	{
+		name: 'Pousada Magister',
+		link: 'http://petropolis.pousadamagister.com.br/',
+		location: 'Centro',
+	},
+	{
+		name: 'Hotel Casablanca Palace',
+		link: 'http://www.casablancahotel.com.br/casablancapalace/',
+		location: 'Centro',
+	},
+	{
+		name: 'Hotel Casablanca Center',
+		link: 'https://www.booking.com/hotel/br/casablanca-center.pt-br.html',
+		location: 'Centro',
+	},
+	{
+		name: 'Casablanca Koeler',
+		link: 'https://www.booking.com/hotel/br/casablanca-koeler.pt-br.html',
+		location: 'Centro',
+	},
+	{
+		name: 'Pousada Catedral Petrópolis',
+		link: 'https://www.pousadacatedralpetropolis.com.br/',
+		location: 'Centro',
+	},
+	{
+		name: 'Hotel Reggia Catarina',
+		link: 'https://www.reggiacatarina.com.br/',
+		location: 'Centro',
+	},
+	{
+		name: 'Casablanca Imperial',
+		link: 'https://bit.ly/casablanca-imperial',
+		location: 'Centro',
+	},
+	{
+		name: 'HMG Suítes Inn Centro Histórico',
+		link: 'https://www.booking.com/hotel/br/ace-suites-business.pt-br.html',
+		location: 'Centro',
+	},
+	{
+		name: 'York Hotel',
+		link: 'https://www.hotelyork.com.br/',
+		location: 'Centro',
+	},
+	{
+		name: 'Kastel Grão Pará',
+		link: 'https://www.hotelgraoparapetropolis.com.br/default.asp',
+		location: 'Centro',
+	},
+	{
+		name: 'Hotel Orleans',
+		link: 'https://hotelorleans.com.br/',
+		location: 'Centro',
+	},
+	{
+		name: 'Princesa Isabel Pousada',
+		link: 'https://www.pousadaprincesaisabel.com.br/',
+		location: 'Centro',
+	},
+	{
+		name: 'ibis Petropolis',
+		link: 'https://bit.ly/ibis-petropolis',
+		location: 'Distante',
+	},
+	{
+		name: 'Pousada Imperial Koeler',
+		link: 'https://www.pousadaimperialkoeler.com.br/',
+		location: 'Centro',
+	},
+];
+
+const airbnbs = [
+	{
+		name: 'Flat Inteiro',
+		link: 'https://bit.ly/flat-inteiro',
+		location: 'Centro',
+	},
+
+	{
+		name: 'Loft Quitandinha',
+		link: 'https://bit.ly/loft-quitandinha',
+		location: 'Distante',
+	},
+	{
+		name: 'Loft Centro',
+		link: 'http://bit.ly/3GsnTvj',
+		location: 'Centro',
+	},
+	{
+		name: 'Cantinho da Paz',
+		link: 'https://abnb.me/domQqwuoOyb',
+		location: 'Próximo ao evento',
+	},
+	{
+		name: 'Cantinho da Pedra',
+		link: 'https://abnb.me/HoVne5DoOyb',
+		location: 'Próximo ao evento',
+	},
+	{
+		name: 'Natureza no Vale dos Esquilos',
+		link: 'https://abnb.me/Wopnu0PoOyb',
+		location: 'Próximo ao evento',
+	},
+	{
+		name: 'Loft Paris',
+		link: 'https://abnb.me/VXqqopWoOyb',
+		location: 'Próximo ao evento',
+	},
+	{
+		name: 'Casa no centro',
+		link: 'http://bit.ly/3Um7eiQ',
+		location: 'Próximo ao evento',
+	},
+	{
+		name: 'Ape Petro',
+		link: 'https://abnb.me/aJTepHeqOyb',
+		location: 'Centro',
+	},
+	{
+		name: 'Studio Museu',
+		link: 'https://abnb.me/ZCqf07lqOyb',
+		location: 'Centro',
+	},
+	{
+		name: 'Apartamento no coração de Petrópolis',
+		link: 'https://abnb.me/PeOeYbsqOyb',
+		location: 'Centro',
+	},
+];
 
 const { title } = Astro.props;
 ---
 
 <Layout title="Mariana e Bruno - Indicações">
-  <HeroInner title="Indicações" />
+	<HeroInner
+		title="Indicações de Hospedagens"
+		content="Estamos muito felizes com sua presença, como sinal de agradecimento selecionamos algumas hospedagens."
+	/>
 
-  <section class="" id="accommodation" aria-labelledby="accommodation-title">
-    <div class="container">
-      <div class="row d-flex justify-content-center">
-        <div class="col-xl-12">
-          <h2 class="section-tittle text-center mb-80" id="accomodation-title">Hospedagens</h2>
-          <p>Selecionamos algumas hospedagens próximas ao eventos.</p>
-          <p>Separamos em duas categorias: <strong>Hotéis</strong> e <strong lang="en">Airbnb</strong></p>
+	<section
+		class="pt-80"
+		id="accommodation"
+		aria-labelledby="accommodation-title"
+	>
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="col-xs-12">
+					<h2 class="section-title mb-10">Hotéis e Pousadas</h2>
+
+					<table
+						class="table table-striped table-bordered"
+						summary="Hotéis e pousadas em Petropólis"
+					>
+						<thead>
+							<tr>
+								<th scope="col">Estabelecimento</th>
+								<th scope="col">Link</th>
+								<th scope="col">Localização</th>
+							</tr>
+						</thead>
+						<tbody>
+							{
+								hotels.map(hotel => (
+									<tr>
+										<th scope="row">{hotel.name}</th>
+										<td>
+											<a class="accommodation__link" href={hotel.link}>
+												consultar disponibilidade do local
+												<Icon
+													aria-hidden="true"
+													name="mdi:external-link"
+													width="14"
+													heigh="14"
+												/>
+											</a>
+										</td>
+										<td>{hotel.location}</td>
+									</tr>
+								))
+							}
+						</tbody>
+					</table>
+				</div>
+
+				<div class="col-xs-12 pt-20">
+					<h2 class="section-title mb-10">Airbnb</h2>
+
+					<table
+						class="table table-striped table-bordered"
+						summary="Indicações de Airbnb em Petropólis"
+					>
+						<thead>
+							<tr>
+								<th scope="col">Estabelecimento</th>
+								<th scope="col">Link</th>
+								<th scope="col">Proximidade ao evento</th>
+							</tr>
+						</thead>
+						<tbody>
+							{
+								airbnbs.map(airbnb => (
+									<tr>
+										<th scope="row">{airbnb.name}</th>
+										<td>
+											<a class="accommodation__link" href={airbnb.link}>
+												consultar disponibilidade do local
+												<Icon
+													aria-hidden="true"
+													name="mdi:external-link"
+													width="14"
+													heigh="14"
+												/>
+											</a>
+										</td>
+										<td>{airbnb.location}</td>
+									</tr>
+								))
+							}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="services" id="services" aria-labelledby="services-title">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<h2 class="section-title" id="services-title">Serviços</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section
+		class="entertainment"
+		id="entertainment"
+		aria-labelledby="entertainment-title"
+	>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12">
+					<h2 class="section-title" id="entertainment-title">Atrações turísticas</h2>
+				</div>
+
+        <div class="row"> 
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="images/atrativos/museu-imperial.avif" alt="" height="200" width="362" />
+            
+              <div class="card-body descricao">
+                <h3 class="card-title text-black">Museu Imperial</h3>
+                <div class="card-text funcionamento">
+                  <p>Informações: (24) 98176-0034</p>
+                  <p>Rua da Imperatriz, 220 – Centro</p>
+                  <p><b>Pagamento apenas em dinheiro</b></p>
+                </div>
+                <span class="social instagram-atrativos">
+                  <b>Instagram:</b><br /><a
+                    href="https://www.instagram.com/museu.imperial"
+                    ><span class="ico-box">
+                      Instagram
+                    </span
+                    >
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card atrativo-box">
+              <img class="card-img-top" src="images/atrativos/cervejaria-bohemia.avif" alt="" height="200" width="362" />
+              <div class="card-body descricao">
+                <h3 class="card-title">Cervejaria Bohemia</h3>
+                <div class="card-text funcionamento">
+                  <p>Visitação: <strong>ABERTO</strong></p>
+                  <p>
+                    <span>Horário:</span> de terça a domingo, das 10h às 18h
+                  </p>
+                  <p><span>Funcionamento da Bilheteria:</span> até 17h</p>
+                  <p>
+                    <span>Tel:</span> Geral (61) 3521-4455
+                  </p>
+                  <p>Informações: (24) 98176-0034</p>
+                  <p>Rua da Imperatriz, 220 – Centro</p>
+                  <p><b>Pagamento apenas em dinheiro</b></p>
+                  <p>
+                    <span>Ingressos:</span> Inteira R$10,00- Meia R$5,00 – Pacote
+                    Família (2 inteiras e 2 meias) R$25,00.
+                  </p>
+                </div>
+
+                <span class="social instagram-atrativos">
+                  <b>Instagram:</b><br /><a
+                    href="https://www.instagram.com/museu.imperial"
+                    ><span class="ico-box">
+                      Instagram
+                    </span
+                    >
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card atrativo-box">
+              <img class="card-img-top" src="images/atrativos/catedral.jpg" alt="" height="200" width="362" />
+            
+              <div class="card-body descricao">
+                <h3 class="card-title">Museu Imperial</h3>
+                <div class="card-text funcionamento">
+                  <p>Visitação: <strong>ABERTO</strong></p>
+                  <p>
+                    <span>Horário:</span> de terça a domingo, das 10h às 18h
+                  </p>
+                  <p><span>Funcionamento da Bilheteria:</span> até 17h</p>
+                  <p>
+                    <span>Tel:</span> Geral (61) 3521-4455
+                  </p>
+                  <p>Informações: (24) 98176-0034</p>
+                  <p>Rua da Imperatriz, 220 – Centro</p>
+                  <p><b>Pagamento apenas em dinheiro</b></p>
+                  <p>
+                    <span>Ingressos:</span> Inteira R$10,00- Meia R$5,00 – Pacote
+                    Família (2 inteiras e 2 meias) R$25,00.
+                  </p>
+                </div>
+              
+                <span class="social instagram-atrativos">
+                  <b>Instagram:</b><br /><a
+                    href="https://www.instagram.com/museu.imperial"
+                    ><span class="ico-box">
+                      Instagram
+                    </span
+                    >
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card atrativo-box">
+              <img class="card-img-top" src="images/atrativos/museu-de-cera.jpg" alt="" height="200" width="362" />
+            
+              <div class="card-body descricao">
+                <h3 class="card-title">Museu de cera</h3>
+                <div class="card-text funcionamento">
+                  <p>Visitação: <strong>ABERTO</strong></p>
+                  <p>
+                    <span>Horário:</span> de terça a domingo, das 10h às 18h
+                  </p>
+                  <p><span>Funcionamento da Bilheteria:</span> até 17h</p>
+                  <p>
+                    <span>Tel:</span> Geral (61) 3521-4455
+                  </p>
+                  <p>Informações: (24) 98176-0034</p>
+                  <p>Rua da Imperatriz, 220 – Centro</p>
+                  <p><b>Pagamento apenas em dinheiro</b></p>
+                  <p>
+                    <span>Ingressos:</span> Inteira R$10,00- Meia R$5,00 – Pacote
+                    Família (2 inteiras e 2 meias) R$25,00.
+                  </p>
+                </div>
+              
+                <span class="social instagram-atrativos">
+                  <b>Instagram:</b><br /><a
+                    href="https://www.instagram.com/museu.imperial"
+                    ><span class="ico-box">
+                      <Icon name="mdi:instagram" aria-hidden="true" />
+                    </span
+                    >
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card atrativo-box">
+              <img class="card-img-top" src="images/atrativos/museu-de-cera.jpg" alt="" height="200" width="362" />
+            
+              <div class="card-body descricao">
+                <h3 class="card-title">Museu de cera</h3>
+                <div class="card-text funcionamento">
+                  <p>Visitação: <strong>ABERTO</strong></p>
+                  <p>
+                    <span>Horário:</span> de terça a domingo, das 10h às 18h
+                  </p>
+                  <p><span>Funcionamento da Bilheteria:</span> até 17h</p>
+                  <p>
+                    <span>Tel:</span> Geral (61) 3521-4455
+                  </p>
+                  <p>Informações: (24) 98176-0034</p>
+                  <p>Rua da Imperatriz, 220 – Centro</p>
+                  <p><b>Pagamento apenas em dinheiro</b></p>
+                  <p>
+                    <span>Ingressos:</span> Inteira R$10,00- Meia R$5,00 – Pacote
+                    Família (2 inteiras e 2 meias) R$25,00.
+                  </p>
+                </div>
+              
+                <span class="social instagram-atrativos">
+                  <b>Instagram:</b><br /><a
+                    href="https://www.instagram.com/museu.imperial"
+                    ><span class="ico-box">
+                      <Icon name="mdi:instagram" aria-hidden="true" />
+                    </span
+                    >
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card atrativo-box">
+              <img class="card-img-top" src="images/atrativos/museu-de-cera.jpg" alt="" height="200" width="362" />
+            
+              <div class="card-body descricao">
+                <h3 class="card-title">Museu de cera</h3>
+                <div class="card-text funcionamento">
+                  <p>Visitação: <strong>ABERTO</strong></p>
+                  <p>
+                    <span>Horário:</span> de terça a domingo, das 10h às 18h
+                  </p>
+                  <p><span>Funcionamento da Bilheteria:</span> até 17h</p>
+                  <p>
+                    <span>Tel:</span> Geral (61) 3521-4455
+                  </p>
+                  <p>Informações: (24) 98176-0034</p>
+                  <p>Rua da Imperatriz, 220 – Centro</p>
+                  <p><b>Pagamento apenas em dinheiro</b></p>
+                  <p>
+                    <span>Ingressos:</span> Inteira R$10,00- Meia R$5,00 – Pacote
+                    Família (2 inteiras e 2 meias) R$25,00.
+                  </p>
+                </div>
+              
+                <span class="social instagram-atrativos">
+                  <b>Instagram:</b><br /><a
+                    href="https://www.instagram.com/museu.imperial"
+                    ><span class="ico-box">
+                      <Icon name="mdi:instagram" aria-hidden="true" />
+                    </span
+                    >
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="col-xs-12">
-          <h3 class="section-tittle text-center mb-80">Hotéis e Pousadas</h3>
-
-          <table class="table table-striped table-bordered">
-            <caption>Hotéis e pousadas em Petropólis</caption>
-            <thead>
-              <tr>
-                <th scope="col">Estabelecimento</th>
-                <th scope="col">Link</th>
-                <th scope="col">Localização</th>
-              </tr> 
-            </thead>
-            <tbody>
-              {
-                hotels.map(hotel =>(
-                  <tr>
-                    <th scope="row">{ hotel.name }</th>
-                    <td>
-                      <a class="accommodation__link" href={ hotel.link }>
-                        consultar disponibilidade do local 
-                        <Icon aria-hidden="true" name="mdi:external-link" width="14" heigh="14" />
-                      </a>
-                    </td>
-                    <td>{ hotel.location }</td>
-                  </tr>
-                ))
-              }
-            </tbody> 
-          </table>
-        </div>
-
-        <div class="col-xs-12">
-          <h3>Airbnb</h3>
-
-          <table class="table table-striped table-bordered">
-            <caption>Hotéis e pousadas em Petropólis</caption>
-            <thead>
-              <tr>
-                <th scope="col">Estabelecimento</th>
-                <th scope="col">Link</th>
-                <th scope="col">Proximidade ao evento</th>
-              </tr> 
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Atelier Molinaro</th>
-                <td><a href="https://bit.ly/atelier-molinaro">consultar disponibilidade do local</a></td>
-                <td>Próximo ao evento</td>
-              </tr>
-
-              <tr>
-                <th scope="row">Villa Violeta</th>
-                <td><a href="https://bit.ly/atelier-molinaro">consultar disponibilidade do local</a></td>
-                <td>Centro</td>
-              </tr>
-            </tbody> 
-          </table>
-        </div>
-      </div>
-    </div>
-  </section> 
-
-  <section class="" id="services" aria-labelledby="services-title">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <h2 id="services-title">Serviços</h2>
-        </div>
-      </div>
-    </div>
-  </section> 
-
-  <section class="" id="entertainment" aria-labelledby="entertainment-title">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <h2 id="entertainment-title">O que visitar em Petropólis</h2>
-        </div>
-      </div>
-    </div>
-  </section> 
-  <About />
-  <RegistryGift />
-  <Map />
+			</div>
+		</div>
+	</section>
+	<Map />
 </Layout>
+
+<style lang="scss">
+	.services {
+		background: var(--standard);
+	}
+	.services,
+	.entertainment {
+		padding: 100px 0;
+	}
+
+	.section-title {
+		color: var(--olive);
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+</style>
