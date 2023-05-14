@@ -1,0 +1,84 @@
+---
+---
+
+<section class="about our-story-area story-padding" aria-labelledby="about-title">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="col-xl-7 col-lg-8">
+				<div class="section-tittle text-center mb-70">
+					<h2 id="about-title">Nossa história de amor</h2>
+					<p>
+						Quisque nec facilisis sem. In at commodo velit. Aliquam tempor
+						volutpat laoreet. Quisque non tellus eleifend arcu gravida aliquam.
+						Vivamus quis consequat nisl, nec luctus libero. Nam sodales sem
+						egestas sem blandit volutpat.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-5">
+				<div class="story-caption background-img mb-40">
+					<div class="about-details story-details">
+						<h3 class="about-details__title">O pedido</h3>
+
+            <div class="about-details__content">
+              <p>
+                Proin at sapien ipsum. Aenean placerat, quam ac tempor congue,
+                orci est luctus ex, ut vestibulum ipsum nisl eu nisi.
+              </p>
+              <p>Proin at sapien ipsum. Aenean placerat, quam ac tempor.</p>
+              <p>Proin at sapien ipsum. Aenean placerat, quam ac tempor.</p>
+              <p>Proin at sapien ipsum. Aenean placerat, quam ac tempor.</p>
+              <p>Proin at sapien ipsum. Aenean placerat, quam ac tempor.</p>
+            </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5">
+				<div class="story-img">
+					<img class="story2" src="/images/gallery/story1.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style lang="scss">
+	.about {
+		position: relative;
+		.story-caption {
+			display: flex;
+			align-items: center;
+			.story-details {
+				padding-left: 24px;
+				padding-right: 24px;
+
+				@media only screen and (min-width: 992px) and (max-width: 1199px) {
+					padding-left: 121px;
+					padding-right: 24px;
+				}
+
+				@media (max-width: 575px) {
+					padding-left: 94px;
+					padding-right: 5px;
+				}
+			}
+		}
+	}
+
+  .about-details__title {
+    color: var(--olive);
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 21px;
+    text-transform: capitalize;
+  }
+  .about-details__content {
+    p {
+      @media (max-width: 575px) {
+        font-size: 15px;
+      }
+    }
+  }
+</style>

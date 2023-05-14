@@ -1,0 +1,103 @@
+<section class="countdown" aria-labelledby="countdown-title">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12 col-md-12">
+        <div class="countdown-wrapper">
+          <h2 class="text-center p-4" id="countdown-title">Faltam:</h2>
+          <div class="row justify-content-between">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="single-counter text-center">
+                <span class="counter" id="days"></span>
+                <p>dias</p>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="single-counter active text-center">
+                <span class="counter" id="hours"></span>
+                <p>horas</p>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="single-counter text-center">
+                <span class="counter" id="minutes"></span>
+                <p>minutos</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="single-counter text-center">
+                <span class="counter" id="seconds"></span>
+                <p>segundos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+.countdown {
+  background: var(--olive);
+  margin: 30px 0;
+
+
+  .countdown-wrapper {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .single-counter {
+      margin-bottom: 30px;
+      padding: 44px 10px 44px 9px;
+
+      span {
+        color: var(--white);
+        display: block;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+      }
+      p {
+        color: var(--white);
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+</style>
+
+<script type="module">
+  const end = new Date("October 14, 2023 04:00:00").getTime();
+  //const end = new Date("November 09, 2020 00:00:00").getTime();
+  const dayEl = document.getElementById('days');
+  const hoursEl = document.getElementById('hours');
+  const minutesEl = document.getElementById('minutes');
+  const secondsEl = document.getElementById('seconds');
+  const seconds = 1000;
+  const minutes = seconds * 60;
+  const hours = minutes * 60;
+  const days = hours * 24;
+
+  const x = setInterval(function () {
+    let now = new Date().getTime();
+    const difference = end - now;
+    
+    if (difference < 0) {
+      clearInterval(x);
+      document.getElementById("done").innerHTML = "We're married! 🎉";
+      return;
+    }
+      
+    dayEl.innerText = Math.floor(difference / days);
+    hoursEl.innerText = Math.floor( (difference % days) / hours );
+    minutesEl.innerText = Math.floor( (difference % hours) / minutes );
+    secondsEl.innerText = Math.floor( (difference % minutes) / seconds );  
+  }, seconds);
+</script>
