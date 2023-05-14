@@ -1,0 +1,64 @@
+---
+import Icon from 'astro-icon';
+import Layout from '../layouts/Page.astro';
+import HeroInner from '../components/hero-inner.astro';
+import Heart from '../components/heart.astro';
+
+const { title } = Astro.props;
+---
+
+<Layout title="Mariana e Bruno - Lista de presentes">
+	<HeroInner
+		title="Lista de presentes"
+		content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices malesuada ante quis pharetra. Nullam non bibendum dolor. Ut vel turpis accumsan, efficitur dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin pulvinar congue ex, vitae commodo. Phasellus condimentum, mi ut sodales gravida."
+	/>
+
+	<section id="content">
+		<div class="container text-center">
+			<div class="row align-items-center">
+        <ul class="gift__list d-flex">
+          <li class="col gift__item">
+            <a href="#" class="gift__link" target="_blank" rel="noopener	noreferrer">
+              <span class="visually-hidden">Lista de presente na Amazon (abre em uma nova aba)</span>
+              <img src="./images/amazon.jpg" class="gift__image" alt="" />
+            </a>
+          </li>
+
+          <li class="col gift__item">
+            <a href="#" class="gift__link" target="_blank" rel="noopener	noreferrer">
+              <span class="visually-hidden">Lista de presente na Amazon (abre em uma nova aba)</span>
+              <img src="./images/amazon.jpg" class="gift__image" alt="" />
+            </a>
+          </li>
+
+          <li class="col gift__item">
+            <a href="#" class="gift__link" target="_blank" rel="noopener	noreferrer">
+              <span class="visually-hidden">Lista de presente na Amazon (abre em uma nova aba)</span>
+              <img src="./images/amazon.jpg" class="gift__image" alt="" />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="row align-items-center" style="padding-top:70px">
+        <div class="text-center animation animate__animated animate__fadeIn">
+          <h3>Obrigado pelo presente. Nós agradecemos</h3>
+          <p class="blurb">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            ultrices malesuada ante quis pharetra. Nullam non bibendum dolor. Ut vel
+            turpis accumsan, efficitur dolor fermentum, tincidunt metus. Etiam ut
+            ultrices nibh. Etiam aliquam mauris non hendrerit faucibus. Proin
+            pulvinar congue ex, vitae commodo. Phasellus condimentum, mi ut sodales
+            gravida.
+          </p>
+          <Heart />
+        </div>
+		</div>
+	</section>
+</Layout>
+
+<style lang="scss">
+  .gift__item {
+    margin: 0 10px;
+  }
+</style>
