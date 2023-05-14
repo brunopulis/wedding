@@ -1,0 +1,135 @@
+---
+import Heart from '../components/heart.astro';
+---
+<section class="couple" id="couple">
+	<div class="container">
+		<div class="row">
+			<div class="text-center">
+				<div class="section-title animation animate__animated animate__fadeInUp">
+					<h2 class="couple__title">O casal</h2>
+
+					<p class="blurb">
+						Nós, Bruno e Mariana, somos um casal que valoriza muito a acessibilidade e a tecnologia. 
+            Por isso, fizemos questão de criar um site de casamento que fosse acessível a todos e que utilizasse a tecnologia para facilitar a comunicação e o compartilhamento de informações.
+					</p>
+
+					<Heart />
+				</div>
+			</div>
+
+			<div class="col-md-offset-1 col-md-6">
+				<div class="photo-item animation animate__animated animate__fadeInLeft">
+					<img src="https://picsum.photos/458/458" alt="" class="hover-animation image-zoom-in" />
+					<div class="layer wh95 hidden-black-overlay hover-animation fade-in">
+					</div>
+
+					<div class="layer wh95 border-photo-caption hover-animation fade-out">
+						<div class="alignment">
+							<div class="v-align center-bottom">
+								<div>
+									<Heart />
+									<div class="banner-text light small">
+										<h3>O noivo</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="layer wh100 hidden-link hover-animation delay1 fade-in">
+						<div class="alignment">
+							<div class="v-align center-middle">
+								<a href="profile-him.html" class="de-button outline medium">
+									ABOUT HIM
+								</a>
+							</div>
+						</div>
+					</div><!--END of ICON LINK-->
+				</div><!--END of PHOTO-ITEM-->
+
+				<p
+					class="couple-excerpt animation fadeInLeft animated"
+					style="visibility: visible;"
+				>
+					<strong>I'm Gerrard Leandro.</strong>Lorem ipsum dolor sit amet,
+					consectetur adipiscing elit. Integer ultrices malesuada ante quis
+					pharetra. Nullam non bibendum dolor. Ut vel turpis accumsan, efficitur
+					dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam
+					aliquam mauris non hendrerit faucibus. Proin pulvinar.
+				</p>
+			</div>
+
+			<div class="col-md-5">
+				<div class="photo-item animation animate__animated animate__fadeInRight">
+				
+					<img
+						src="https://picsum.photos/458/458"
+						alt=""
+						class="hover-animation image-zoom-in"
+					/>
+
+					<!--PHOTO OVERLAY-->
+					<div class="layer wh95 hidden-black-overlay hover-animation fade-in">
+					</div><!--END of PHOTO OVERLAY-->
+
+					<!--PHOTO CAPTION-->
+					<div class="layer wh95 border-photo-caption hover-animation fade-out">
+						<div class="alignment">
+							<div class="v-align center-bottom">
+								<div>
+									<Heart />
+									<div
+										class="banner-text light small"
+										style="letter-spacing:3px;"
+									>
+										<h3>A noiva</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!--END of PHOTO CAPTION-->
+
+					<!--ICON LINK-->
+					<div class="layer wh95 hidden-link hover-animation delay1 fade-in">
+						<div class="alignment">
+							<div class="v-align center-middle">
+								<a href="profile-her.html" class="de-button outline medium">
+									ABOUT HER
+								</a>
+							</div>
+						</div>
+					</div><!--END of ICON LINK-->
+				</div><!--END of PHOTO-ITEM-->
+
+				<p class="couple-excerpt animation animate__animated animate__fadeInRight">
+					<strong>I'm Dianne Anna.</strong>Lorem ipsum dolor sit amet,
+					consectetur adipiscing elit. Integer ultrices malesuada ante quis
+					pharetra. Nullam non bibendum dolor. Ut vel turpis accumsan, efficitur
+					dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam
+					aliquam mauris non hendrerit faucibus. Proin pulvinar.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style lang="scss">
+  .couple {
+    padding: 140px 0;
+
+    &__title {
+      font-size: 40px;
+      margin: 20px 0;
+      text-transform: uppercase;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 70px;
+  }
+
+  .photo-item {
+    width: 100%;
+    height: 100%;
+  }
+</style>
