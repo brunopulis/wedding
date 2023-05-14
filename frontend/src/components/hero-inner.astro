@@ -1,7 +1,7 @@
 ---
 interface Props {
   title: string;
-  content: string;
+  content?: string;
 }
 
 const { title, content } = Astro.props;
@@ -14,7 +14,7 @@ const { title, content } = Astro.props;
         <div class="row">
           <div class="col-xl-12">
             <div class="hero-cap">
-              <h1 class="h1 text-white" id="hero-title">{title}</h1>
+              <h1 class="h1 display-5 fw-bold text-white text-center" id="hero-title">{title}</h1>
               <p class="text-white">{content}</p>
             </div>
           </div>
