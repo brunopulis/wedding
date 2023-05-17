@@ -5,7 +5,7 @@ interface Props {
   cardImage: string;
   cardTextAlternative?: string;
   cardTitle: string;
-  cardSocial: string;
+  cardSocial?: string;
 }
 
 const { cardImage, cardTextAlternative, cardTitle, cardSocial } = Astro.props;
@@ -17,21 +17,7 @@ const { cardImage, cardTextAlternative, cardTitle, cardSocial } = Astro.props;
   <div class="card-body descricao">
     <h3 class="card-title">{cardTitle}</h3>
     <div class="card-text funcionamento">
-      <p>Visitação: <strong>ABERTO</strong></p>
-      <p>
-        <span>Horário:</span> de terça a domingo, das 10h às 18h
-      </p>
-      <p><span>Funcionamento da Bilheteria:</span> até 17h</p>
-      <p>
-        <span>Tel:</span> Geral (61) 3521-4455
-      </p>
-      <p>Informações: (24) 98176-0034</p>
-      <p>Rua da Imperatriz, 220 – Centro</p>
-      <p><b>Pagamento apenas em dinheiro</b></p>
-      <p>
-        <span>Ingressos:</span> Inteira R$10,00- Meia R$5,00 – Pacote
-        Família (2 inteiras e 2 meias) R$25,00.
-      </p>
+      <slot />
     </div>
     <div class="separador"></div>
 

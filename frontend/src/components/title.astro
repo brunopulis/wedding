@@ -1,0 +1,12 @@
+---
+interface Props { 
+  heading?: string;
+  className: string;
+  id: string;
+  content: string;
+}
+
+const { heading, class, id, content } = Astro.props;
+---
+
+<h2 class={className} id={id}>{content}</h2>

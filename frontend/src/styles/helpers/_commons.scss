@@ -200,55 +200,6 @@ hr {
   }
 }
 
-.btn {
-  background: $btn_bg;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
-  padding: 30px 44px;
-  padding: 30px 27px;
-  border-radius: 30px;
-
-  letter-spacing: 1px;
-  line-height: 0;
-  margin-bottom: 0;
-  cursor: pointer;
-  display: inline-block;
-  -moz-user-select: none;
-  cursor: pointer;
-  transition: color 0.4s linear;
-  position: relative;
-  z-index: 1;
-  border: 0;
-  overflow: hidden;
-  margin: 0;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #da1b1b;
-    z-index: 1;
-    border-radius: 5px;
-    transition: transform 0.5s;
-    transition-timing-function: ease;
-    transform-origin: 0 0;
-    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
-    // 
-    transform: scaleX(0);
-  }
-}
-
-.btn:hover::before {
-  transform: scaleX(1);
-  color: #fff !important;
-  z-index: -1;
-}
-
 // other
 .header-btn {
   background: #4043bc;
@@ -259,22 +210,6 @@ hr {
   &::before {
     background: #ec4683;
   }
-}
-
-.btn-whit {
-  background: #fff;
-  text-transform: uppercase;
-  color: #362d2b;
-  font-size: 16px;
-  font-weight: 400;
-  padding: 30px 44px;
-  border-radius: 30px;
-}
-
-.btn.focus,
-.btn:focus {
-  outline: 0;
-  box-shadow: none;
 }
 
 .hero-btn {
