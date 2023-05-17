@@ -1,0 +1,124 @@
+---
+import Heart from 'components/heart.astro';
+---
+<section class="entertainment" id="entertainment" aria-labelledby="entertainment-title">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12 text-center">
+          <h2 class="section-title text-center" id="entertainment-title">Atrações turísticas</h2>
+          <Heart />
+        </div>
+
+        <div class="row"> 
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card">
+              <img class="card-img-top" src="/images/atrativos/museu-imperial.avif" alt="" height="200" width="362" />
+            
+              <div class="card-body descricao">
+                <h3 class="card-title text-black">Museu Imperial</h3>
+                <div class="card-text funcionamento">
+                  <p>Informações: (24) 98176-0034</p>
+                  <p>Rua da Imperatriz, 220 – Centro</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card atrativo-box">
+              <img class="card-img-top" src="/images/atrativos/cervejaria-bohemia.avif" alt="" height="200" width="362" />
+              <div class="card-body descricao">
+                <h3 class="card-title">Cervejaria Bohemia</h3>
+                <div class="card-text funcionamento">
+                  <p>Informações: (24) 98176-0034</p>
+                  <p>Rua da Imperatriz, 220 – Centro</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card atrativo-box">
+              <img class="card-img-top" src="/images/atrativos/palacio-quitandinha.jpg" alt="" height="200" width="362" />
+            
+              <div class="card-body descricao">
+                <h3 class="card-title">Palacio de Quitandinha</h3>
+                <div class="card-text funcionamento">
+                  <p>Informações: (24) 98176-0034</p>
+                  <p>Rua da Imperatriz, 220 – Centro</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card atrativo-box">
+              <img class="card-img-top" src="/images/atrativos/museu-brinquedo.jpg" alt="" height="200" width="362" />
+            
+              <div class="card-body descricao">
+                <h3 class="card-title">Museu dos brinquedos</h3>
+                <div class="card-text funcionamento">
+                  <p>Informações: (24) 98176-0034</p>
+                  <p>Rua da Imperatriz, 220 – Centro</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card atrativo-box">
+              <img class="card-img-top" src="/images/atrativos/museu-de-cera.jpg" alt="" height="200" width="362" />
+            
+              <div class="card-body descricao">
+                <h3 class="card-title">Museu de cera</h3>
+                <div class="card-text funcionamento">
+                  <p>Informações: (24) 98176-0034</p>
+                  <p>Rua da Imperatriz, 220 – Centro</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card atrativo-box">
+              <img class="card-img-top" src="/images/atrativos/orquidario-binot.jpg" alt="" height="200" width="362" />
+            
+              <div class="card-body descricao">
+                <h3 class="card-title">Orquidario Binot</h3>
+                <div class="card-text funcionamento">
+                  <p>Informações: (24) 98176-0034</p>
+                  <p>Rua da Imperatriz, 220 – Centro</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <style lang="scss">
+    .services {
+      background: var(--standard);
+    }
+    .services,
+    .entertainment {
+      padding: 100px 0;
+    }
+  
+    .section-title {
+      color: var(--olive);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+  
+    .card {
+      margin-bottom: 20px;
+  
+      &-title {
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  </style>

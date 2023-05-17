@@ -3,10 +3,11 @@ import type { NavItem } from "../types";
 
 const navItems: Array<NavItem> = [
   { title: "Home", url: "/" },
-  { title: "Sobre nós", url: "/sobre" },
-  { title: "Indicações", url: "/indicacoes" },
-  { title: "Lua de mel", url: "/lua-de-mel" },
+  { title: "Nossa História", url: "/sobre" },
   { title: "Galeria", url: "#" },
+  { title: "Indicações", url: "/indicacoes" },
+  { title: "Presentes", url: "/nossos-presentes" },
+  { title: "Lua de mel", url: "/lua-de-mel" },
 ];
 ---
 
@@ -74,6 +75,11 @@ const navItems: Array<NavItem> = [
         }
       }
     }
+  }
+
+  .main-menu__link {
+    text-transform: uppercase;
+    font-weight: 700;
   }
 }
 

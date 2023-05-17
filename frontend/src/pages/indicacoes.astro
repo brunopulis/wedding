@@ -1,63 +1,72 @@
 ---
 import Layout from '../layouts/Page.astro';
 import HeroInner from '../components/hero-inner.astro';
+import Heart from '../components/heart.astro';
 import Icon from 'astro-icon';
 import Attractions from '../components/attractions.astro';
 import Map from '../components/map.astro';
+import Services from 'components/services.astro';
+import Entertainment from 'components/entertainment.astro';
 
-let hotels = [
-	{
-		name: 'Atelier Molinaro',
-		link: 'https://bit.ly/atelier-molinaro',
-		location: 'Próximo ao evento',
-	},
-
+let downtowns = [
 	{
 		name: 'Kastel Vila Bavaria',
 		link: 'https://bit.ly/vila-bavaria',
+    url:  '../images/acomodacoes/hotel-villa-bavaria.webp',
 		location: 'Centro',
+    type: 'Pousada'
 	},
-
 	{
 		name: 'Pousada Palácio de Cristal',
 		link: 'https://bit.ly/3KeF9Fk',
+    url:  '../images/acomodacoes/pousada-palacio-cristal.webp',
 		location: 'Centro',
+    type: 'Pousada'
 	},
 
 	{
 		name: 'Pousada Dom Petrópolis',
 		link: 'http://www.pousadadompetropolis.com.br/',
+    url: '../images/acomodacoes/pousada-dom-petropolis.webp',
 		location: 'Centro',
+    type: 'Pousada'
 	},
 	{
 		name: 'Pousada Magister',
 		link: 'http://petropolis.pousadamagister.com.br/',
+    url: '../images/acomodacoes/magister.webp',
 		location: 'Centro',
+    type: 'Pousada'
 	},
 	{
 		name: 'Hotel Casablanca Palace',
 		link: 'http://www.casablancahotel.com.br/casablancapalace/',
 		location: 'Centro',
+    type: 'Hotel'
 	},
 	{
 		name: 'Hotel Casablanca Center',
 		link: 'https://www.booking.com/hotel/br/casablanca-center.pt-br.html',
 		location: 'Centro',
+    type: 'Hotel'
 	},
 	{
 		name: 'Casablanca Koeler',
 		link: 'https://www.booking.com/hotel/br/casablanca-koeler.pt-br.html',
+    url: '../images/acomodacoes/casablanca-koeler.webp',
 		location: 'Centro',
 	},
 	{
 		name: 'Pousada Catedral Petrópolis',
 		link: 'https://www.pousadacatedralpetropolis.com.br/',
 		location: 'Centro',
+    type: 'Pousada'
 	},
 	{
 		name: 'Hotel Reggia Catarina',
 		link: 'https://www.reggiacatarina.com.br/',
 		location: 'Centro',
+    type: 'Hotel'
 	},
 	{
 		name: 'Casablanca Imperial',
@@ -68,11 +77,13 @@ let hotels = [
 		name: 'HMG Suítes Inn Centro Histórico',
 		link: 'https://www.booking.com/hotel/br/ace-suites-business.pt-br.html',
 		location: 'Centro',
+    type: 'Hotel'
 	},
 	{
 		name: 'York Hotel',
 		link: 'https://www.hotelyork.com.br/',
 		location: 'Centro',
+    type: 'Hotel'
 	},
 	{
 		name: 'Kastel Grão Pará',
@@ -83,22 +94,95 @@ let hotels = [
 		name: 'Hotel Orleans',
 		link: 'https://hotelorleans.com.br/',
 		location: 'Centro',
+    type: 'Hotel'
 	},
 	{
 		name: 'Princesa Isabel Pousada',
 		link: 'https://www.pousadaprincesaisabel.com.br/',
 		location: 'Centro',
-	},
-	{
-		name: 'ibis Petropolis',
-		link: 'https://bit.ly/ibis-petropolis',
-		location: 'Distante',
+    type: 'Pousada'
 	},
 	{
 		name: 'Pousada Imperial Koeler',
 		link: 'https://www.pousadaimperialkoeler.com.br/',
 		location: 'Centro',
+    type: 'Pousada'
 	},
+  {
+		name: 'Flat Inteiro',
+		link: 'https://bit.ly/flat-inteiro',
+		location: 'Centro',
+	},
+	{
+		name: 'Loft Centro',
+		link: 'http://bit.ly/3GsnTvj',
+		location: 'Centro',
+	},
+	{
+		name: 'Ape Petro',
+		link: 'https://abnb.me/aJTepHeqOyb',
+		location: 'Centro',
+	},
+	{
+		name: 'Studio Museu',
+		link: 'https://abnb.me/ZCqf07lqOyb',
+		location: 'Centro',
+	},
+	{
+		name: 'Apartamento no coração de Petrópolis',
+		link: 'https://abnb.me/PeOeYbsqOyb',
+		location: 'Centro',
+	},
+  {
+		name: 'Ape Petro',
+		link: 'https://abnb.me/aJTepHeqOyb',
+		location: 'Centro',
+	},
+	{
+		name: 'Studio Museu',
+		link: 'https://abnb.me/ZCqf07lqOyb',
+		location: 'Centro',
+	},
+	{
+		name: 'Apartamento no coração de Petrópolis',
+		link: 'https://abnb.me/PeOeYbsqOyb',
+		location: 'Centro',
+	},
+];
+
+let nextEvents = [
+	{
+		name: 'Atelier Molinaro',
+		link: 'https://molinarohotel.com.br/',
+    url:  '../images/acomodacoes/atelie-molinario.webp',
+		location: 'Próximo ao evento',
+    type: 'Pousada'
+	},
+	{
+		name: 'Cantinho da Paz',
+		link: 'https://abnb.me/domQqwuoOyb',
+		location: 'Próximo ao evento',
+	},
+	{
+		name: 'Cantinho da Pedra',
+		link: 'https://abnb.me/HoVne5DoOyb',
+		location: 'Próximo ao evento',
+	},
+	{
+		name: 'Natureza no Vale dos Esquilos',
+		link: 'https://abnb.me/Wopnu0PoOyb',
+		location: 'Próximo ao evento',
+	},
+	{
+		name: 'Loft Paris',
+		link: 'https://abnb.me/VXqqopWoOyb',
+		location: 'Próximo ao evento',
+	},
+	{
+		name: 'Casa no centro',
+		link: 'http://bit.ly/3Um7eiQ',
+		location: 'Próximo ao evento',
+	}
 ];
 
 const airbnbs = [
@@ -106,12 +190,6 @@ const airbnbs = [
 		name: 'Flat Inteiro',
 		link: 'https://bit.ly/flat-inteiro',
 		location: 'Centro',
-	},
-
-	{
-		name: 'Loft Quitandinha',
-		link: 'https://bit.ly/loft-quitandinha',
-		location: 'Distante',
 	},
 	{
 		name: 'Loft Centro',
@@ -169,201 +247,72 @@ const { title } = Astro.props;
 		content="Estamos muito felizes com sua presença, como sinal de agradecimento selecionamos algumas hospedagens."
 	/>
 
-	<section
-		class="pt-80"
-		id="accommodation"
-		aria-labelledby="accommodation-title"
-	>
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="col-xs-12">
-					<h2 class="section-title mb-10">Hotéis e Pousadas</h2>
-
-					<table
-						class="table table-striped table-bordered"
-						summary="Hotéis e pousadas em Petropólis"
-					>
-						<thead>
-							<tr>
-								<th scope="col">Estabelecimento</th>
-								<th scope="col">Link</th>
-								<th scope="col">Localização</th>
-							</tr>
-						</thead>
-						<tbody>
-							{
-								hotels.map(hotel => (
-									<tr>
-										<th scope="row">{hotel.name}</th>
-										<td>
-											<a class="accommodation__link" href={hotel.link}>
-												consultar disponibilidade do local
-												<Icon
-													aria-hidden="true"
-													name="mdi:external-link"
-													width="14"
-													heigh="14"
-												/>
-											</a>
-										</td>
-										<td>{hotel.location}</td>
-									</tr>
-								))
-							}
-						</tbody>
-					</table>
-				</div>
-
-				<div class="col-xs-12 pt-20">
-					<h2 class="section-title mb-10">Airbnb</h2>
-
-					<table
-						class="table table-striped table-bordered"
-						summary="Indicações de Airbnb em Petropólis"
-					>
-						<thead>
-							<tr>
-								<th scope="col">Estabelecimento</th>
-								<th scope="col">Link</th>
-								<th scope="col">Proximidade ao evento</th>
-							</tr>
-						</thead>
-						<tbody>
-							{
-								airbnbs.map(airbnb => (
-									<tr>
-										<th scope="row">{airbnb.name}</th>
-										<td>
-											<a class="accommodation__link" href={airbnb.link}>
-												consultar disponibilidade do local
-												<Icon
-													aria-hidden="true"
-													name="mdi:external-link"
-													width="14"
-													heigh="14"
-												/>
-											</a>
-										</td>
-										<td>{airbnb.location}</td>
-									</tr>
-								))
-							}
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="services" id="services" aria-labelledby="services-title">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-12">
-					<h2 class="section-title" id="services-title">Serviços</h2>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section
-		class="entertainment"
-		id="entertainment"
-		aria-labelledby="entertainment-title"
-	>
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-12">
-					<h2 class="section-title" id="entertainment-title">Atrações turísticas</h2>
-				</div>
-
-        <div class="row"> 
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="card">
-              <img class="card-img-top" src="/images/atrativos/museu-imperial.avif" alt="" height="200" width="362" />
-            
-              <div class="card-body descricao">
-                <h3 class="card-title text-black">Museu Imperial</h3>
-                <div class="card-text funcionamento">
-                  <p>Informações: (24) 98176-0034</p>
-                  <p>Rua da Imperatriz, 220 – Centro</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="card atrativo-box">
-              <img class="card-img-top" src="/images/atrativos/cervejaria-bohemia.avif" alt="" height="200" width="362" />
-              <div class="card-body descricao">
-                <h3 class="card-title">Cervejaria Bohemia</h3>
-                <div class="card-text funcionamento">
-                  <p>Informações: (24) 98176-0034</p>
-                  <p>Rua da Imperatriz, 220 – Centro</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="card atrativo-box">
-              <img class="card-img-top" src="/images/atrativos/palacio-quitandinha.jpg" alt="" height="200" width="362" />
-            
-              <div class="card-body descricao">
-                <h3 class="card-title">Palacio de Quitandinha</h3>
-                <div class="card-text funcionamento">
-                  <p>Informações: (24) 98176-0034</p>
-                  <p>Rua da Imperatriz, 220 – Centro</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="card atrativo-box">
-              <img class="card-img-top" src="/images/atrativos/museu-brinquedo.jpg" alt="" height="200" width="362" />
-            
-              <div class="card-body descricao">
-                <h3 class="card-title">Museu dos brinquedos</h3>
-                <div class="card-text funcionamento">
-                  <p>Informações: (24) 98176-0034</p>
-                  <p>Rua da Imperatriz, 220 – Centro</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="card atrativo-box">
-              <img class="card-img-top" src="/images/atrativos/museu-de-cera.jpg" alt="" height="200" width="362" />
-            
-              <div class="card-body descricao">
-                <h3 class="card-title">Museu de cera</h3>
-                <div class="card-text funcionamento">
-                  <p>Informações: (24) 98176-0034</p>
-                  <p>Rua da Imperatriz, 220 – Centro</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-4">
-            <div class="card atrativo-box">
-              <img class="card-img-top" src="/images/atrativos/orquidario-binot.jpg" alt="" height="200" width="362" />
-            
-              <div class="card-body descricao">
-                <h3 class="card-title">Orquidario Binot</h3>
-                <div class="card-text funcionamento">
-                  <p>Informações: (24) 98176-0034</p>
-                  <p>Rua da Imperatriz, 220 – Centro</p>
-                </div>
-              </div>
-            </div>
-          </div>
+  <div id="content">
+    <section class="pt-80" id="accommodation" aria-labelledby="accommodation-title">
+      <div class="container">
+        <h2 class="section-title text-center mb-10">
+          Hotéis e Pousadas <Heart/>
+        </h2>
+        
+        <div class="mb-10">
+          <p>Para aqueles que estarão conosco no casamento, reservamos algumas informações importantes.</p>
+          <p>
+            O <strong>distrito de Itaipava</strong> é distante do local da cerimônia. Mas não se preocupem! <br/>
+            Escolhemos opções encantadoras para aproveitar a beleza de Petrópolis e desfrutar de uma estadia aconchegante.
+          </p>
+          <p>Preparem-sem, mal podemos esperar para recebê-los! Listamos abaixo as acomodações baseadas em proximidade.</p>
         </div>
-			</div>
-		</div>
-	</section>
-	<Map />
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h3 class="display-8 fw-7 section-title mb-10">Próximos a cerimônia</h3>
+        <div class="row d-flex justify-content-center">
+          {
+            nextEvents.map(nextEvent => (
+              <div class="col-lg-4">
+                <article class="card">
+                  <img src={nextEvent.url} class="card-img-top img-fluid" width="362" height="200" loading="lazy" alt="">
+                  <div class="card-body">
+                    <h3 class="card-title">{nextEvent.name}</h3>
+                    <p class="card-text">Distância: <strong>{nextEvent.location}</strong></p>
+                    <a href={nextEvent.link} class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                      Consultar <span class="visually-hidden">disponibilidade do {nextEvent.name} (abre em uma nova aba)</span>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            ))
+          }
+        </div>
+
+        <h3 class="display-8 section-title fw-7 mb-10">Próximos ao centro</h3>
+        <div class="row d-flex justify-content-center">
+          {
+            downtowns.map(downtown => (
+              <div class="col-lg-4">
+                <article class="card">
+                  <img src={downtown.url} class="card-img-top img-fluid" width="362" height="200" loading="lazy" alt="">
+                  <div class="card-body">
+                    <h3 class="card-title">{downtown.name}</h3>
+                    <p class="card-text">Distância: <strong>{downtown.location}</strong></p>
+                    <a href={downtown.link} class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                      Consultar <span class="visually-hidden">disponibilidade do {downtown.name} (abre em uma nova aba)</span>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <Services />
+    <Entertainment />
+    <Map />
+  </div>
 </Layout>
 
 <style lang="scss">
@@ -380,4 +329,13 @@ const { title } = Astro.props;
 		font-weight: 700;
 		margin-bottom: 10px;
 	}
+
+  .card {
+    margin-bottom: 20px;
+
+    &-title {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
 </style>
