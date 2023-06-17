@@ -3,12 +3,11 @@ import Icon from 'astro-icon';
 ---
 
 <footer class="site-footer">
-
   <div class="container">
     <div class="footer-border">
       <div class="row d-flex align-items-center">
         <div class="col-xl-12">
-          <div class="footer-copy-right text-center">
+          <div class="footer-copy-right">
             <p>
               Copyright &copy; {new Date().getFullYear()}
               Todos os direitos reservados | Esse template foi criado
@@ -20,13 +19,12 @@ import Icon from 'astro-icon';
       </div>
     </div>
   </div>
-</div>
-  </div>
 </footer>
 
 <style lang="scss">
   .site-footer {
     background: var(--theme-black);
+    color: #fff;
     padding: 10px;
 
   } 
@@ -92,15 +90,16 @@ import Icon from 'astro-icon';
     border-top: 1px solid #26282c;
     padding: 33px 0px 33px;
   }
+}
 
-  .footer-copy-right {
-    & p {
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 2;
-      margin: 0;
-      color: #cfcfcf;
-    }
+.footer-copy-right {
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 2;
+    margin: 0;
+    color: #fff;
+    text-align: center;
   }
 }
 
