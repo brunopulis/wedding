@@ -177,66 +177,13 @@ let nextEvents = [
 	}
 ];
 
-const airbnbs = [
-	{
-		name: 'Flat Inteiro',
-		link: 'https://bit.ly/flat-inteiro',
-		location: 'Centro',
-	},
-	{
-		name: 'Loft Centro',
-		link: 'http://bit.ly/3GsnTvj',
-		location: 'Centro',
-	},
-	{
-		name: 'Cantinho da Paz',
-		link: 'https://abnb.me/domQqwuoOyb',
-		location: 'Próximo ao evento',
-	},
-	{
-		name: 'Cantinho da Pedra',
-		link: 'https://abnb.me/HoVne5DoOyb',
-		location: 'Próximo ao evento',
-	},
-	{
-		name: 'Natureza no Vale dos Esquilos',
-		link: 'https://abnb.me/Wopnu0PoOyb',
-		location: 'Próximo ao evento',
-	},
-	{
-		name: 'Loft Paris',
-		link: 'https://abnb.me/VXqqopWoOyb',
-		location: 'Próximo ao evento',
-	},
-	{
-		name: 'Casa no centro',
-		link: 'http://bit.ly/3Um7eiQ',
-		location: 'Próximo ao evento',
-	},
-	{
-		name: 'Ape Petro',
-		link: 'https://abnb.me/aJTepHeqOyb',
-		location: 'Centro',
-	},
-	{
-		name: 'Studio Museu',
-		link: 'https://abnb.me/ZCqf07lqOyb',
-		location: 'Centro',
-	},
-	{
-		name: 'Apartamento no coração de Petrópolis',
-		link: 'https://abnb.me/PeOeYbsqOyb',
-		location: 'Centro',
-	},
-];
-
 const { title } = Astro.props;
 ---
 
-<Layout title="Mariana e Bruno - Indicações">
+<Layout title="Mariana e Bruno - Acomodações">
 	<HeroInner
-		title="Indicações de Hospedagens"
-		content="Estamos muito felizes com sua presença, como sinal de agradecimento selecionamos algumas hospedagens."
+		title="Acomodações"
+		content="Estamos muito felizes com sua presença, por isso selecionamos os melhores lugares para vocês"
 	/>
 
   <div id="content">
@@ -257,9 +204,9 @@ const { title } = Astro.props;
       </div>
     </section>
 
-    <section>
+    <section aria-labelledby="next-wedding-title">
       <div class="container">
-        <h3 class="display-8 fw-7 section-title mb-10">Próximos a cerimônia</h3>
+        <h3 class="display-8 fw-7 section-title mb-10" id="next-wedding-title">Próximos a cerimônia</h3>
         <div class="row d-flex justify-content-center">
           {
             nextEvents.map(nextEvent => (

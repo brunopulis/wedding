@@ -23,58 +23,52 @@ import Heart from '../components/heart.astro';
 		<div class="row">
       <div class="wedding-item col-md-4 animation fadeIn animated">
         <div class="photo-item">
-          <img src="./images/dom-lenbruger.webp" alt="" class="hover-animation image-zoom-in" />
-          <div class="layer wh95 hidden-black-overlay hover-animation fade-in"></div>
-
-          <div class="layer wh95 border-photo-caption fade-out">
-          </div>
+          <picture>
+            <source srcset="./images/dom-lenbruger.avif" type="image/avif">
+            <source srcset="./images/dom-lenbruger.webp" type="image/webp">
+            <img src="./images/dom-lenbruger.webp" alt="" srcset="">
+          </picture>
         </div>
 
         <div class="title-excerpt">
-          <h3 class="item__title"><a href="location.html">O local</a></h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Integer ultrices malesuada ante quis pharetra. Nullam non
-          </p>
+          <h3 class="item__title">O local</h3>
+          <address>Vale dos Esquilos - R. Pinho da Silva, 99-121 - Retiro, Petrópolis - RJ, 25680-670</address>
         </div>
       </div>
 
-      <div class="wedding-item col-md-4 animation delay1 fadeIn animated">
+      <div class="wedding-item col-md-4 animation">
         <div class="photo-item">
-          <img src="./images/gift.jpg" alt="" class="hover-animation image-zoom-in" />
-          <div class="layer wh95 hidden-black-overlay hover-animation fade-in"></div>
-          <div class="layer wh95 border-photo-caption fade-out"></div>
+          <picture>
+            <source srcset="./images/gift.avif" type="image/avif">
+            <source srcset="./images/gift.webp" type="image/webp">
+            <img src="./images/gift.jpg" alt="" srcset="">
+          </picture>
         </div>
 
         <div class="title-excerpt">
-          <h3 class="item__title"><a href="/nossos-presentes">Lista de presentes</a></h3>
+          <h3 class="item__title"><a href="#wedding-gifts-title">Lista de presentes</a></h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Integer ultrices malesuada ante quis pharetra. Nullam non
+            Criamos duas listas de presentes para maior comodidade.
           </p>
         </div>
       </div>
 
       <div class="wedding-item col-md-4 animation delay2 fadeIn animated">
         <div class="photo-item">
-          <img
-            src="./images/accomodation.jpg"
-            alt=""
-            class="hover-animation image-zoom-in"
-          />
-
-          <div class="layer wh95 hidden-black-overlay hover-animation fade-in"></div>
-          <div class="layer wh95 border-photo-caption fade-out"></div>
+          <picture>
+            <source srcset="./images/accomodation.avif" type="image/avif">
+            <source srcset="./images/accomodation.webp" type="image/webp">
+            <img src="./images/accomodation.jpg" alt="" srcset="">
+          </picture>
         </div>
 
         <div class="title-excerpt">
-          <h3 class="item__title"><a href="accomodation.html">Acomodações</a></h3>
+          <h3 class="item__title"><a href="/indicacoes">Acomodações</a></h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Integer ultrices malesuada ante quis pharetra. Nullam non
           </p>
         </div>
-        <!-- END of TITLE & EXCERPT -->
       </div>
 		</div>
 	</div>
@@ -82,7 +76,7 @@ import Heart from '../components/heart.astro';
 
 <style lang="scss">
 	.wedding-info {
-		padding: 140px 0;
+		padding: 100px 0;
 	}
 
   .photo-item {
