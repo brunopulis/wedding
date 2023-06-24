@@ -12,14 +12,14 @@ let downtowns = [
 	{
 		name: 'Kastel Vila Bavaria',
 		link: 'https://bit.ly/vila-bavaria',
-    url:  '../images/acomodacoes/hotel-villa-bavaria.webp',
+   		 url:  '../images/acomodacoes/hotel-villa-bavaria.webp',
 		location: 'Centro',
-    type: 'Pousada'
+    	type: 'Pousada'
 	},
 	{
 		name: 'Pousada Palácio de Cristal',
 		link: 'https://bit.ly/3KeF9Fk',
-    url:  '../images/acomodacoes/pousada-palacio-cristal.webp',
+    	url:  '../images/acomodacoes/pousada-palacio-cristal.webp',
 		location: 'Centro',
     type: 'Pousada'
 	},
@@ -105,8 +105,9 @@ let downtowns = [
 	{
 		name: 'Pousada Imperial Koeler',
 		link: 'https://www.pousadaimperialkoeler.com.br/',
+		url: '../images/acomodacoes/pousada-imperial-koeler.webp',
 		location: 'Centro',
-    type: 'Pousada'
+   		type: 'Pousada'
 	},
   {
 		name: 'Flat Inteiro',
@@ -141,11 +142,13 @@ let downtowns = [
 	{
 		name: 'Studio Museu',
 		link: 'https://abnb.me/ZCqf07lqOyb',
+		url: '../images/acomodacoes/studio-museu.webp',
 		location: 'Centro',
 	},
 	{
 		name: 'Apartamento no coração de Petrópolis',
 		link: 'https://abnb.me/PeOeYbsqOyb',
+		url: '../images/acomodacoes/ap-petro.webp',
 		location: 'Centro',
 	},
 ];
@@ -154,33 +157,38 @@ let nextEvents = [
 	{
 		name: 'Atelier Molinaro',
 		link: 'https://molinarohotel.com.br/',
-    url:  '../images/acomodacoes/atelie-molinario.webp',
+    	url:  '../images/acomodacoes/atelie-molinario.webp',
 		location: 'Próximo ao evento',
-    type: 'Pousada'
+    	type: 'Pousada'
 	},
 	{
 		name: 'Cantinho da Paz',
 		link: 'https://abnb.me/domQqwuoOyb',
+		url:  '../images/acomodacoes/cantinho-paz.webp',
 		location: 'Próximo ao evento',
 	},
 	{
 		name: 'Cantinho da Pedra',
 		link: 'https://abnb.me/HoVne5DoOyb',
+		url:  '../images/acomodacoes/cantinho-pedra.webp',
 		location: 'Próximo ao evento',
 	},
 	{
 		name: 'Natureza no Vale dos Esquilos',
 		link: 'https://abnb.me/Wopnu0PoOyb',
+		url: '../images/acomodacoes/natureza.webp',
 		location: 'Próximo ao evento',
 	},
 	{
 		name: 'Loft Paris',
 		link: 'https://abnb.me/VXqqopWoOyb',
+		url:  '../images/acomodacoes/loft-paris.webp',
 		location: 'Próximo ao evento',
 	},
 	{
 		name: 'Casa no centro',
 		link: 'http://bit.ly/3Um7eiQ',
+		url:  '../images/acomodacoes/casa-centro.webp',
 		location: 'Próximo ao evento',
 	}
 ];
@@ -273,13 +281,12 @@ const { title } = Astro.props;
             nextEvents.map(nextEvent => (
               <div class="col-lg-4">
                 <article class="card">
-                  <img src={nextEvent.url} class="card-img-top img-fluid" width="362" height="200" loading="lazy" alt="">
+                  <img src={nextEvent.url} class="img-fluid" loading="lazy" alt="">
                   <div class="card-body">
-                    <h3 class="card-title">{nextEvent.name}</h3>
+					<a href={nextEvent.link} target="_blank" rel="noopener noreferrer">
+                    	<h3 class="card-title">{nextEvent.name}</h3>
+					</a>
                     <p class="card-text">Distância: <strong>{nextEvent.location}</strong></p>
-                    <a href={nextEvent.link} class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                      Consultar <span class="visually-hidden">disponibilidade do {nextEvent.name} (abre em uma nova aba)</span>
-                    </a>
                   </div>
                 </article>
               </div>
@@ -293,13 +300,12 @@ const { title } = Astro.props;
             downtowns.map(downtown => (
               <div class="col-lg-4">
                 <article class="card">
-                  <img src={downtown.url} class="card-img-top img-fluid" width="362" height="200" loading="lazy" alt="">
+                  <img src={downtown.url} class="img-fluid" loading="lazy" alt="">
                   <div class="card-body">
-                    <h3 class="card-title">{downtown.name}</h3>
+					<a href={downtown.link} target="_blank" rel="noopener noreferrer">
+                    	<h3 class="card-title">{downtown.name}</h3>
+					</a>
                     <p class="card-text">Distância: <strong>{downtown.location}</strong></p>
-                    <a href={downtown.link} class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                      Consultar <span class="visually-hidden">disponibilidade do {downtown.name} (abre em uma nova aba)</span>
-                    </a>
                   </div>
                 </article>
               </div>
@@ -332,10 +338,16 @@ const { title } = Astro.props;
 
   .card {
     margin-bottom: 20px;
+	box-shadow: 0 10px 30px 0 rgba(153, 153, 153, 0.1);
 
     &-title {
       font-size: 20px;
       font-weight: 700;
+	  color: var(--olive);
     }
+
+	&-body {
+		padding: 35px 30px 40px 30px;
+	}
   }
 </style>
