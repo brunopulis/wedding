@@ -3,9 +3,9 @@ import Heart from '../components/heart.astro';
 ---
 <section class="couple" id="couple">
 	<div class="container">
-		<div class="row align-items-centerw">
+		<div class="row position-relative">
 			<div class="text-center">
-				<div class="section-title animation animate__animated animate__fadeInUp">
+				<div class="section-title">
 					<h2 class="couple__title">O casal</h2>
 
 					<p class="blurb">
@@ -16,58 +16,35 @@ import Heart from '../components/heart.astro';
 				</div>
 			</div>
 
-      <div class="col-md-12">
-        <picture>
+			<div class="col-md-6">
+        <picture class="">
           <source srcset="/images/couple.avif" class="mx-auto d-block" type="image/avif">
           <source srcset="/images/couple.webp" class="mx-auto d-block" type="image/webp">
           <img src="/images/couple.webp" class="mx-auto d-block" alt="">
         </picture>
-      </div>
-
-			<div class="col-md-6">
-				<div class="photo-item animation animate__animated animate__fadeInLeft">
-					<div class="layer wh95 border-photo-caption hover-animation fade-out">
-						<div class="alignment">
-							<div class="v-align center-bottom">
-                <div class="banner-text light small">
-                  <h3>O noivo</h3>
-                  <p class="couple-excerpt animation fadeInLeft animated">
-                    <strong>I'm Gerrard Leandro.</strong>Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Integer ultrices malesuada ante quis
-                    pharetra. Nullam non bibendum dolor. Ut vel turpis accumsan, efficitur
-                    dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam
-                    aliquam mauris non hendrerit faucibus. Proin pulvinar.
-                  </p>
-                </div>
-							</div>
-						</div>
-					</div>
-				</div><!--END of PHOTO-ITEM-->
 			</div>
 
 			<div class="col-md-6">
-				<div class="photo-item animation animate__animated animate__fadeInRight">
-					<div class="layer wh95 border-photo-caption hover-animation fade-out">
-						<div class="alignment">
-							<div class="v-align center-bottom">
-								<div>
-									<div class="banner-text light small">
-										<h3>A noiva</h3>
-                    <p class="couple-excerpt animation animate__animated animate__fadeInRight">
-                      <strong>I'm Dianne Anna.</strong>Lorem ipsum dolor sit amet,
-                      consectetur adipiscing elit. Integer ultrices malesuada ante quis
-                      pharetra. Nullam non bibendum dolor. Ut vel turpis accumsan, efficitur
-                      dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam
-                      aliquam mauris non hendrerit faucibus. Proin pulvinar.
-                    </p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div><!--END of PHOTO CAPTION-->
-				</div><!--END of PHOTO-ITEM-->
+        <div class="banner-text light small">
+          <h3 class="couple__subtitle">O noivo</h3>
+          <p class="couple-excerpt animation">
+            <strong>I'm Gerrard Leandro.</strong>Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Integer ultrices malesuada ante quis
+            pharetra. Nullam non bibendum dolor. Ut vel turpis accumsan, efficitur
+            dolor fermentum, tincidunt metus. Etiam ut ultrices nibh. Etiam
+            aliquam mauris non hendrerit faucibus. Proin pulvinar.
+          </p>
+        </div>
 
-				
+        <div class="banner-text light small">
+          <h3 class="couple__subtitle ">A noiva</h3>
+          <p class="couple-excerpt">
+            Sou a <strong>Mariana</strong> tenho 30 anos e sou de Petrópolis - RJ. 
+            Sou muito habilidosa e criativa com crochê. 
+            Tenho um amor por incansável por Libras, que reflete na minha dedicação à inclusão e comunicação acessível. 
+            Te espero para juntos comemorarmos esse dia tão especial.
+          </p>
+        </div>
 			</div>
 		</div>
 	</div>
@@ -82,6 +59,12 @@ import Heart from '../components/heart.astro';
       margin: 20px 0;
       text-transform: uppercase;
     }
+
+    &__subtitle {
+      font-size: 30px;
+      color: var(--olive);
+      font-weight: 800;
+    }
   }
 
   .section-title {
@@ -89,7 +72,8 @@ import Heart from '../components/heart.astro';
   }
 
   .photo-item {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 35%;
+    width: 35ch;
   }
 </style>
