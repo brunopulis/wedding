@@ -14,13 +14,16 @@
 
         <div class="brand-active brand-border">
           <div class="single-brand">
-            <img src="/images/amazon.jpg" alt="" />
+            <a href="https://encurtador.com.br/notQ6" target="_blank" rel="noopener noreferrer">
+              <img src="/images/amazon.jpg" alt="Lista de presentes na Amazon" />
+            </a>
           </div>
           <div class="single-brand ms-4">
-            <img src="/images/precolandia.png" alt="" />
+            <a href="https://encurtador.com.br/gmCP1" target="_blank" rel="noopener noreferrer">
+              <img src="/images/precolandia.png" alt="Lista de presente na Precolândia" />
+            </a>
           </div>
         </div>
-
 			</div>
 		</div>
 	</div>
@@ -34,5 +37,9 @@
   .brand-active {
     display: flex;
     justify-content: center;
+
+    @media(max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
   }
 </style>
