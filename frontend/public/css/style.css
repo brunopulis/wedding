@@ -2069,30 +2069,7 @@ hr {
   z-index: 99;
   top: -15px;
 }
-.mobile_menu .slicknav_menu {
-  background: transparent;
-  margin-top: 0px !important;
-}
-.mobile_menu .slicknav_menu .slicknav_btn {
-  top: -21px;
-}
-.mobile_menu .slicknav_menu .slicknav_btn .slicknav_icon-bar {
-  background-color: red !important;
-}
-.mobile_menu .slicknav_menu .slicknav_nav {
-  margin-top: 24px !important;
-}
-.mobile_menu .slicknav_menu .slicknav_nav a:hover {
-  background: transparent;
-  color: #ff2828;
-}
-.mobile_menu .slicknav_menu .slicknav_nav a {
-  font-size: 15px;
-  padding: 7px 10px;
-}
-.mobile_menu .slicknav_menu .slicknav_nav .slicknav_item a {
-  padding: 0 !important;
-}
+
 .slider-height {
   height: 980px;
 }
@@ -2116,30 +2093,7 @@ hr {
     height: 350px;
   }
 }
-.slider-height2 {
-  height: 500px;
-  background-size: cover;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .slider-height2 {
-    height: 350px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .slider-height2 {
-    height: 260px;
-  }
-}
-@media (max-width: 575px) {
-  .slider-height2 {
-    height: 260px;
-  }
-}
-.slider-area2 {
-  background-image: url(/images/hero/hero2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .slider-area {
   background-image: url('/images/hero/homeHero_1.jpg');
   background-repeat: no-repeat;
