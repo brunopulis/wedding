@@ -1,0 +1,79 @@
+---
+import Heart from '../heart.astro';
+---
+<section class="couple" id="couple">
+	<div class="container">
+		<div class="row position-relative">
+			<div class="text-center">
+				<div class="section-title">
+					<h2 class="couple__title">O casal</h2>
+
+					<p class="blurb">
+						Nós, Bruno e Mariana, somos um casal que valoriza muito a acessibilidade e a tecnologia. 
+            Por isso, fizemos questão de criar um site de casamento que fosse acessível a todos e que utilizasse a tecnologia para facilitar a comunicação e o compartilhamento de informações.
+					</p>
+					<Heart />
+				</div>
+			</div>
+
+			<div class="col-md-6">
+        <picture class="">
+          <source srcset="/images/couple.avif" class="mx-auto d-block" type="image/avif">
+          <source srcset="/images/couple.webp" class="mx-auto d-block" type="image/webp">
+          <img src="/images/couple.webp" class="mx-auto d-block" alt="">
+        </picture>
+			</div>
+
+			<div class="col-md-6">
+        <div class="banner-text light small">
+          <h3 class="couple__subtitle">O noivo</h3>
+          <p class="couple-excerpt animation">
+            Oi! Eu sou o <strong>Bruno</strong>, tenho 34 anos e moro em BH e claro que torço pelo Galo. 
+            Sou programador e luto pela acessibilidade digital. 
+            Amo pensar, escrever, ler e falar sobre a vida, teologia e organização. 
+            Nas horas vagas me aventuro no violão flamenco. 
+            Conto com sua presença no dia mais importante de nossas vidas!
+          </p>
+        </div>
+
+        <div class="banner-text light small">
+          <h3 class="couple__subtitle ">A noiva</h3>
+          <p class="couple-excerpt">
+            Sou a <strong>Mariana</strong> tenho 30 anos e sou de Petrópolis - RJ. 
+            Sou muito habilidosa e criativa com crochê. 
+            Tenho um amor por incansável por Libras, que reflete na minha dedicação à inclusão e comunicação acessível. 
+            Te espero para juntos comemorarmos esse dia tão especial.
+          </p>
+        </div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style lang="scss">
+  .couple {
+    padding: 140px 0;
+
+    &__title {
+      font-size: 40px;
+      margin: 20px 0;
+      text-transform: uppercase;
+    }
+
+    &__subtitle {
+      font-size: 30px;
+      color: var(--olive);
+      font-weight: 800;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 70px;
+  }
+
+  .photo-item {
+    position: absolute;
+    top: 35%;
+    width: 35ch;
+  }
+</style>
