@@ -1,11 +1,11 @@
-import { SelectIcon } from '@sanity/icons'
+import { BasketIcon } from '@sanity/icons'
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'typeService',
   type: 'document',
-  icon: SelectIcon,
-  title: 'Tipo de serviço',
+  icon: BasketIcon,
+  title: 'Categoria de serviço',
   fields: [
     defineField({
       name: 'name',
