@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Page.astro';
+import HeroInner from '../components/hero-inner.astro';
+import Moments from 'components/moments/moments.astro';
+
+const { title } = Astro.props;
+---
+
+<Layout title="Mariana e Bruno - Galeria de Fotos">
+  <HeroInner title="Galeria de fotos" />
+
+  <section class="our-history" id="our-history" aria-labelledby="our-history-title">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-xl-12">
+          <div class="wrapper">
+            <h2 class="section-tittle text-center" id="our-history-title">Galeria de fotos</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris  </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center">
+        <article class="col-md-4">
+          <img src="./images/photo-4.webp" loading="lazy" alt="">
+        </article>
+        <article class="col-md-4">
+          <img src="./images/photo-4.webp" loading="lazy" alt="">
+        </article>
+        <article class="col-md-4">
+          <img src="./images/photo-4.webp" loading="lazy" alt="">
+        </article>
+        <article class="col-md-4">
+          <img src="./images/photo-4.webp" loading="lazy" alt="">
+        </article>
+        <article class="col-md-4">
+          <img src="./images/photo-4.webp" loading="lazy" alt="">
+        </article>
+        <article class="col-md-4">
+          <img src="./images/photo-4.webp" loading="lazy" alt="">
+        </article>
+        <article class="col-md-4">
+          <img src="./images/photo-4.webp" loading="lazy" alt="">
+        </article>
+        <article class="col-md-4">
+          <img src="./images/photo-4.webp" loading="lazy" alt="">
+        </article>
+        <article class="col-md-4">
+          <img src="./images/photo-4.webp" loading="lazy" alt="">
+        </article>
+        <article class="col-md-4">
+          <img src="./images/photo-4.webp" loading="lazy" alt="">
+        </article>
+        <article class="col-md-4">
+          <img src="./images/photo-4.webp" loading="lazy" alt="">
+        </article>
+        <article class="col-md-4">
+          <img src="./images/photo-4.webp" loading="lazy" alt="">
+        </article>
+      </div>
+    </div>    
+  </section>
+</Layout>
+
+<style lang="scss">
+  .our-history {
+    padding: 120px 0;
+  }
+</style>
