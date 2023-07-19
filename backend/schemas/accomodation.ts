@@ -1,5 +1,7 @@
 import { HomeIcon } from '@sanity/icons'
 import {defineField, defineType} from 'sanity'
+import typeAccomodation from './typeAccomodation'
+import neighborhood from './neighborhood'
 
 export default defineType({
   name: 'accomodation',
@@ -14,9 +16,16 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'contact',
-      type: 'number',
-      title: 'Contato'
+      name: 'type',
+      type: 'reference',
+      title: 'Tipo local',
+      to: [{type: 'typeAccomodation' }]
+    }),
+    defineField({
+      name: 'neighboorhood',
+      type: 'reference',
+      title: 'Bairro',
+      to: [{type: 'neighboorhood' }]
     }),
     defineField({
       name: 'url',
