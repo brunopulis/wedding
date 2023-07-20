@@ -5,8 +5,6 @@
 
 // Frameworks
 // ============================================================
-
-@import "animate.css";
 @import "bootstrap/scss/bootstrap";
 
 // Helpers
@@ -16,32 +14,9 @@
 @import "helpers/mixins";
 @import "helpers/commons";
 
-// Components
-// ============================================================
-
-// @import 'components/c-hero';
-
-// Layout
-// ============================================================
-
-// @import "layout/header";
-// @import "layout/navigation";
-// @import "layout/hero";
-// @import "layout/footer";
 
 // Pages
 // ============================================================
-
-// Vendor
-// ============================================================
-
-// @import "third-party/font-awesome/fontawesome";
-// @import "third-party/animate";
-// @import "third-party/iconmoon";
-// @import "third-party/slick/slick";
-// @import "third-party/slick/accessible-slick-theme";
-// @import "third-party/magnific-popup";
-
 
 @import 'overlay';
 @import 'color';

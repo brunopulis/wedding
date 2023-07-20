@@ -1,16 +1,16 @@
 .slider-height {
-  height: 980px;
+  height: 620px;
 
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    height: 600px;
+    height: 500px;
   }
 
   @media only screen and (min-width: 768px) and (max-width: 991px) {
-    height: 500px;
+    height: 450px;
   }
 
   @media only screen and (min-width: 576px) and (max-width: 767px) {
-    height: 500px;
+    height: 400px;
   }
 
   @media (max-width: 575px) {
@@ -33,12 +33,6 @@
   @media (max-width: 575px) {
     height: 260px;
   }
-}
-
-.slider-area2 {
-  background-image: url(../images/hero/hero2.png);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 
