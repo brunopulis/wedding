@@ -1,0 +1,110 @@
+---
+import Heart from '../heart.astro';
+---
+
+<section class="wedding-info pricing-card-area section-bg">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="col-lg-12">
+				<div class="wrapper section-tittle mb-70">
+					<h2 class="wedding-info__title">O Casamento</h2>
+
+					<div class="wedding-info__content">
+						<p>Reservamos informações importantes sobre nosso casamento para você desfrutar.</p>
+					</div>
+          <Heart />
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+      <article class="wedding-item col-md-4">
+        <div class="photo-item">
+          <picture>
+            <source srcset="./images/dom-lenbruger.avif" type="image/avif">
+            <source srcset="./images/dom-lenbruger.webp" type="image/webp">
+            <img src="./images/dom-lenbruger.webp" alt="Fachada da Dom Lenbruger, ela é azul escura com detalhes em branco. O letreiro tem dons amarelos e branco." loading="lazy">
+          </picture>
+        </div>
+
+        <div class="title-excerpt">
+          <h3 class="item__title">
+            <a href="https://encurtador.com.br/dGJW7" target="_blank" rel="noopener noreferrer">O local</a>
+          </h3>
+          <address>Vale dos Esquilos - R. Pinho da Silva, 99 - Retiro, Petrópolis - RJ</address>
+        </div>
+      </article>
+
+      <article class="wedding-item col-md-4">
+        <div class="photo-item">
+          <picture>
+            <source srcset="./images/gift.avif" type="image/avif">
+            <source srcset="./images/gift.webp" type="image/webp">
+            <img src="./images/gift.webp" alt="Rosas brancas ao lado de uma caixa de presente marrom com um laço na cor lavanda. Ela está em cima de uma mesa branca." loading="lazy">
+          </picture>
+        </div>
+
+        <div class="title-excerpt">
+          <h3 class="item__title"><a href="#wedding-gifts-title">Lista de presentes</a></h3>
+          <p>Para nos presentear, disponibilizamos três opções de lista: Quero de casamento, Amazon e Preçolândia.</p>
+        </div>
+      </article>
+
+      <div class="wedding-item col-md-4">
+        <div class="photo-item">
+          <picture>
+            <source srcset="./images/accomodation.avif" type="image/avif" loading="lazy">
+            <source srcset="./images/accomodation.webp" type="image/webp" loading="lazy">
+            <img src="./images/accomodation.webp" alt="" srcset="" loading="lazy">
+          </picture>
+        </div>
+
+        <div class="title-excerpt">
+          <h3 class="item__title"><a href="/acomodacoes">Acomodações</a></h3>
+          <p>Sabemos que muitos amigos e familiares virão de outros estados, por isso preparamos uma lista de de hotéis, pousadas e Airbnb.</p>
+        </div>
+      </div>
+		</div>
+	</div>
+</section>
+
+<style lang="scss">
+	.wedding-info {
+		padding: 100px 0;
+	}
+
+  .photo-item {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .photo-item .layer.border-photo-caption {
+    opacity: 1;
+    border: 1px solid #Fff;
+  }
+
+  .photo-item .layer.wh95 {
+    width: 95%;
+    height: 95%;
+  }
+
+  .title-excerpt {
+    position: relative;
+    background-color: #FFF;
+    padding: 25px;
+  }
+
+  .item__title {
+    font-size: 20px;
+    margin: 20px 0;
+    text-transform: uppercase;
+  }
+
+  .item__title a:hover {
+    color: #16161a !important;
+  }
+</style>
