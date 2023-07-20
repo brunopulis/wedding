@@ -3,6 +3,7 @@ import Icon from 'astro-icon';
 import Layout from '../layouts/Page.astro';
 import HeroInner from '../components/hero-inner.astro';
 import Moments from '../components/moments/moments.astro';
+import Map from 'components/map/map.astro';
 
 const { title } = Astro.props;
 ---
@@ -76,6 +77,7 @@ const { title } = Astro.props;
   </section>
   
   <Moments />
+  <Map />
 </Layout>
 
 <style lang="scss">
