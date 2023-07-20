@@ -1,0 +1,60 @@
+---
+import Heart from '../heart.astro';
+---
+
+<section class="wedding-gifts brand-area section-padding-b" aria-labelledby="wedding-gifts-title">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="wrapper">
+				<div class="section-tittle text-center mb-80">
+					<h2 class="" id="wedding-gifts-title">Lista de presentes</h2>
+					<p>
+						Estamos celebrando um momento especial e criamos listas de presentes na Amazon e Precolândia. 
+            Sua presença e carinho são os melhores presentes que podemos receber. 
+            Agradecemos de coração pelo apoio. Mal podemos esperar para celebrar com você!
+					</p>
+          <p>As listas de presentes estão abaixo:</p>
+          <Heart />
+				</div>
+
+        <div class="brand-active brand-border">
+          <div class="single-brand">
+            <a href="https://encurtador.com.br/notQ6" target="_blank" rel="noopener noreferrer">
+              <img src="/images/amazon.webp" loading="lazy" alt="Lista de presentes na Amazon" />
+            </a>
+          </div>
+
+          <div class="single-brand ms-4">
+            <a href="https://encurtador.com.br/knpyW" target="_blank" rel="noopener noreferrer">
+              <img src="/images/logo-magazine.webp" loading="lazy" alt="Lista de presente de casamento da Magazine Luiza" />
+            </a>
+          </div>
+
+          <div class="single-brand ms-4">
+            <a href="https://encurtador.com.br/gmCP1" target="_blank" rel="noopener noreferrer">
+              <img src="/images/precolandia.webp" loading="lazy" alt="Lista de presente na Precolândia" />
+            </a>
+          </div>
+        </div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style lang="scss">
+  .wedding-gifts {
+    padding: 60px 0;
+  }
+
+  .brand-active {
+    display: flex;
+    justify-content: center;
+
+    @media(max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .single-brand img { max-width: 100%; }
+</style>
