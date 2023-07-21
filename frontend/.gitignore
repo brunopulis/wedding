@@ -5,6 +5,7 @@ dist/
 # dependencies
 node_modules/
 wed-master/
+frontend/public/images/**/*.Identifier
 
 # logs
 npm-debug.log*
