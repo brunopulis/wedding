@@ -1,16 +1,17 @@
 // Base
 // ============================================================
 
+@import "base/color";
 @import "base/variables";
 
 // Frameworks
 // ============================================================
+
 @import "bootstrap/scss/bootstrap";
 
 // Helpers
 // ============================================================
 
-// @import "helpers/functions";
 @import "helpers/mixins";
 @import "helpers/commons";
 
@@ -18,18 +19,18 @@
 // Pages
 // ============================================================
 
-@import 'overlay';
-@import 'color';
+@import "overlay";
+@import "extend";
 
-// Homepage1
-@import 'gallery';
-@import 'gallery_2';
-@import 'gift';
 
-// inner Page
-@import 'services';
+// Components
+// ============================================================
+
+@import "components/breadcrumb";
+@import "gallery";
+@import "gallery_2";
 
 // Default Element Page
-@import 'bradcam';
-@import 'extend';
-@import 'elements';
+// ============================================================
+
+@import "elements";

@@ -31,40 +31,6 @@ p {
   margin-bottom: 15px;
 }
 
-// background-image
-.bg-img-1 {
-  background-image: url(../images/slider/slider-img-1.jpg);
-}
-
-.bg-img-2 {
-  background-image: url(../images/background-img/bg-img-2.jpg);
-}
-
-.cta-bg-1 {
-  background-image: url(../images/background-img/bg-img-3.jpg);
-}
-
-.img {
-  max-width: 100%;
-  @include transition(.3s);
-}
-
-.f-left {
-  float: left
-}
-
-.f-right {
-  float: right
-}
-
-.fix {
-  overflow: hidden
-}
-
-.clear {
-  clear: both;
-}
-
 a,
 .button {
   @include transition(.3s);
@@ -78,8 +44,6 @@ a:focus,
 a {
   color: rgb(99, 92, 92);
 }
-
-
 
 a:focus,
 a:hover,
@@ -111,22 +75,6 @@ hr {
   border-top: 0 none;
   margin: 30px 0;
   padding: 0;
-}
-
-/* Theme-overlay */
-.theme-overlay {
-  position: relative
-}
-
-.theme-overlay::before {
-  background: #1696e7 none repeat scroll 0 0;
-  content: "";
-  height: 100%;
-  left: 0;
-  opacity: 0.6;
-  position: absolute;
-  top: 0;
-  width: 100%;
 }
 
 .overlay {
@@ -184,23 +132,6 @@ hr {
   }
 }
 
-// other
-.header-btn {
-  background: #4043bc;
-  padding: 20px 11px;
-  min-width: 120px;
-  position: relative;
-
-  &::before {
-    background: #ec4683;
-  }
-}
-
-.hero-btn {
-  padding: 30px 56px;
-
-}
-
 // Custom Btn
 .border-btn {
   background: none;
@@ -250,10 +181,6 @@ hr {
 // Border btn-2
 .border-btn.border-btn2 {
   padding: 17px 52px;
-}
-
-.breadcrumb>.active {
-  color: #888;
 }
 
 /* scrollUp */
@@ -396,18 +323,6 @@ hr {
   }
 }
 
-.gift-padding {
-  padding: 120px 0;
-
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    padding: 100px 0;
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    padding: 100px 0;
-  }
-}
-
 .section-padding30 {
   padding-top: 195px;
   padding-bottom: 170px;
@@ -424,93 +339,6 @@ hr {
   @media only screen and (min-width: 576px) and (max-width: 767px) {
     padding-top: 65px;
     padding-bottom: 100px;
-  }
-}
-
-.section-padding4 {
-  padding-top: 100px;
-  padding-bottom: 170px;
-
-  @media only screen and (min-width: 1200px) and (max-width: 1600px) {
-    padding-top: 100px;
-    padding-bottom: 170px;
-  }
-
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    padding-top: 100px;
-    padding-bottom: 110px;
-  }
-
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    padding-top: 100px;
-    padding-bottom: 70px;
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    padding-top: 0;
-    padding-bottom: 30px;
-  }
-}
-
-.testimonial-padding {
-  padding: 157px 0;
-
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    padding: 120px 0;
-  }
-
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    padding: 100px 0;
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    padding-top: 80px;
-    padding-bottom: 60px;
-  }
-}
-
-.footer-padding {
-  padding-top: 135px;
-  padding-bottom: 74px;
-
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    padding-top: 120px;
-    padding-bottom: 74px;
-  }
-
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    padding-top: 120px;
-    padding-bottom: 0px;
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    padding-top: 100px;
-    padding-bottom: 0px;
-  }
-
-  @media (max-width: 575px) {
-    padding-top: 100px;
-    padding-bottom: 0px;
-  }
-}
-
-.section-padding-b {
-  padding-bottom: 150px;
-
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    padding-bottom: 70x;
-  }
-
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    padding-bottom: 50px;
-  }
-
-  @media only screen and (min-width: 576px) and (max-width: 767px) {
-    padding-bottom: 50px;
-  }
-
-  @media (max-width: 575px) {
-    padding-bottom: 50px;
   }
 }
 
