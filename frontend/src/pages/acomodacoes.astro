@@ -206,13 +206,13 @@ const { title } = Astro.props;
 				nextEvents.map(nextEvent => (
 				<div class="col-lg-4">
 					<article class="card">
-					<img src={nextEvent.url} class="img-fluid" loading="lazy" alt="">
-					<div class="card-body">
-						<a href={nextEvent.link} target="_blank" rel="noopener noreferrer">
-							<h3 class="card-title">{nextEvent.name}</h3>
-						</a>
-						<p class="card-text">Distância: <strong>{nextEvent.location}</strong></p>
-					</div>
+					  <img src={nextEvent.url} class="img-fluid" loading="lazy" alt="">
+					  <div class="card-body">
+						  <a href={nextEvent.link} target="_blank" rel="noopener noreferrer">
+							  <h3 class="card-title">{nextEvent.name}</h3>
+						  </a>
+						  <p class="card-text">Distância: <strong>{nextEvent.location}</strong></p>
+					  </div>
 					</article>
 				</div>
 				))
