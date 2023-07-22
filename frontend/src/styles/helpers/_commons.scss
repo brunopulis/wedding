@@ -344,6 +344,9 @@ hr {
 
 // section Tittle
 .section-tittle {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  
   img {
     @include transition(.6s);
     position: relative;
