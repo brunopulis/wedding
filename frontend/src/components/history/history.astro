@@ -1,16 +1,53 @@
 ---
-import Layout from '../layouts/Page.astro';
-import HeroInner from '../components/hero/hero-inner.astro';
-import Moments from '../components/moments/moments.astro';
-import Map from 'components/map/map.astro';
+let moment = [
+    {
+      title: 'Amor à primeira vista',
+      description: 'Era dia 30 de junho de 2021, num grupo do telegram onde as pessoas conversavam sobre conservadorismo e cristianismo, numa conversa sobre trabalho ele falou que trabalha com acessibilidade digital. Ela, intérprete de Libras curiosa que só, chamou-o no privado: "- Oi! Eu também trabalho com acessibilidade".',
+      webp: './images/noivado.webp',
+      jpg: './images/noivado.jpg',
+      shortAlt: '',
+      longAlt: ''
+    },
 
-const { title } = Astro.props;
+    {
+      title: 'Primeiro beijo',
+      description: 'Depois de alguns dias juntos fisicamente, e após muitas conversas, já sabendo que tínhamos o mesmo propósito, o mesmo interesse, decidimos juntos namorar e só então nos beijamos timidamente no dia 18 de agosto de 2021.',
+      webp: './images/noivado.webp',
+      jpg: './images/noivado.jpg',
+      shortAlt: '',
+      longAlt: ''
+    },
+
+    {
+      title: 'Amor à primeira vista',
+      description: 'Era dia 30 de junho de 2021, num grupo do telegram onde as pessoas conversavam sobre conservadorismo e cristianismo, numa conversa sobre trabalho ele falou que trabalha com acessibilidade digital. Ela, intérprete de Libras curiosa que só, chamou-o no privado: "- Oi! Eu também trabalho com acessibilidade".',
+      webp: './images/noivado.webp',
+      jpg: './images/noivado.jpg',
+      shortAlt: '',
+      longAlt: ''
+    },
+
+    {
+      title: 'Amor à primeira vista',
+      description: 'Era dia 30 de junho de 2021, num grupo do telegram onde as pessoas conversavam sobre conservadorismo e cristianismo, numa conversa sobre trabalho ele falou que trabalha com acessibilidade digital. Ela, intérprete de Libras curiosa que só, chamou-o no privado: "- Oi! Eu também trabalho com acessibilidade".',
+      webp: './images/noivado.webp',
+      jpg: './images/noivado.jpg',
+      shortAlt: '',
+      longAlt: ''
+    },
+
+    {
+      title: 'Amor à primeira vista',
+      description: 'Era dia 30 de junho de 2021, num grupo do telegram onde as pessoas conversavam sobre conservadorismo e cristianismo, numa conversa sobre trabalho ele falou que trabalha com acessibilidade digital. Ela, intérprete de Libras curiosa que só, chamou-o no privado: "- Oi! Eu também trabalho com acessibilidade".',
+      webp: './images/noivado.webp',
+      jpg: './images/noivado.jpg',
+      shortAlt: '',
+      longAlt: ''
+    }
+]
 ---
 
-<Layout title="Mariana e Bruno - Nossa história">
-  <HeroInner title="Nossa História" />
-
-  <section class="our-history" id="our-history" aria-labelledby="our-history-title">
+<section class="our-history" id="our-history" aria-labelledby="our-history-title">
     <div class="container">
       <div class="row d-flex justify-content-center">
         <div class="wrapper">
@@ -18,7 +55,6 @@ const { title } = Astro.props;
           <p>Como é que o <strong>mineiro</strong> e a <strong>petropolitana</strong> foram se conhecer nesse mundo?</p>
         </div>
         
-
         <div class="our-history__inner">
           <div class="our-history__items love_js_items">
             <article class="our-history__item love_js_item row">
@@ -120,132 +156,3 @@ const { title } = Astro.props;
       </div>
     </div>
   </section>
-  
-  <Moments />
-  <Map />
-</Layout>
-
-<style lang="scss">
-  .our-history {
-    padding: 120px 0;
-
-    &__inner {
-      max-width: 994px;
-      margin: 0 auto;
-    }  
-  }
-
-  .our-history__items {
-    margin-bottom: -50px;
-  }
-
-  .our-history__box {
-    background: #fff;
-    box-shadow: 0 10px 30px 0 rgba(153, 153, 153, 0.1);
-    margin-right: -17px;
-    padding: 45px 90px;
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-    z-index: 2;
-
-    &:before {
-      content: "";
-      background: url(../images/shape.png) no-repeat scroll center center;
-      position: absolute;
-      left: -55px;
-      bottom: -46px;
-      height: 145px;
-      width: 180px;
-    }
-
-    h3 { 
-      color: var(--olive);
-      margin-bottom: 16px;
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 14px;
-      line-height: 1.5;
-    }
-  }
-
-  .our-history__image {
-    margin-left: -112px;
-  }
-
-
-
-  // Par
-
-
-  .love_journey_area{
-	.love_inner{
-		max-width: 944px;
-		margin: auto;
-	}
-}
-.love_js_items{
-	margin-bottom: -50px;
-}
-.love_js_item{
-	margin-bottom: 50px;
-	.col-lg-7{
-		vertical-align: middle;
-		align-self: center;
-	}
-}
-
-.right {
-	.love_text_item {
-		margin-right: 0px;
-		&:before{
-			background: url(../images/shape-2.png) no-repeat scroll center center;
-			right: -45px;
-			left: auto;
-		}
-	}
-
-	.love_img {
-		margin-left: 0px;
-		margin-right: -112px;
-	}
-}
-
-.love_text_item{
-	background: #fff;
-	margin-right: -17px;
-	position: relative;
-	z-index: 2;
-	box-shadow: 0px 10px 30px 0px rgba(153, 153, 153, 0.1);
-	text-align: center;
-	padding: 45px 90px;
-	overflow: hidden;
-
-	&:before {
-		content: "";
-		background: url(../images/shape.png) no-repeat scroll center center;
-		position: absolute;
-		left: -55px;
-		bottom: -46px;
-		height: 145px;
-		width: 180px;
-	}
-
-	h4{
-		
-		margin-bottom: 16px;
-	
-		font-weight: bold;
-	}
-	p{
-		font-size: 14px;
-	}
-}
-.love_img{
-	margin-left: -112px;
-}
-
- </style>
