@@ -14,7 +14,7 @@ const { title, content } = Astro.props;
     <div class="row">
       <div class="col-xl-12">
         <div class="hero-inner__content">
-          <h1 class="h1 display-5 fw-bold text-white text-center" id="hero-title">{title}</h1>
+          <h1 class="hero-inner__title" id="hero-title">{title}</h1>
           <div class="hero__breadcrumb">
             <Breadcrumbs indexText="Home" ariaLabel="Breadcrumb">
                 <svg
@@ -47,6 +47,16 @@ const { title, content } = Astro.props;
     flex-direction: column;
     justify-content: center;
     min-height: 300px;
+  }
+
+  .hero-inner__title {
+    color: var(--white);
+    text-align: center;
+    font: 700 3rem 'Playfair Display', serif;
+
+    @media(max-width: 480px) {
+      font-size: 2rem;
+    }
   }
 
   .hero-inner__content {

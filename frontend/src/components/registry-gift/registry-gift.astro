@@ -2,12 +2,12 @@
 import Heart from "../heart.astro";
 ---
 
-<section class="wedding-gifts brand-area section-padding-b" aria-labelledby="wedding-gifts-title">
+<section class="wedding-gifts" aria-labelledby="wedding-gifts-title">
 	<div class="container">
 		<div class="row d-flex justify-content-center">
 			<div class="wrapper">
-				<div class="section-tittle text-center mb-80">
-					<h2 id="wedding-gifts-title">Lista de presentes</h2>
+				<div class="wedding-gifts__block">
+					<h2 class="wedding-gifts__title" id="wedding-gifts-title">Lista de presentes</h2>
 					<p>
 						Estamos celebrando um momento especial e criamos listas de presentes na <a href="https://encurtador.com.br/notQ6" target="_blank" rel="noopener noreferrer">Amazon</a>, <a href="https://encurtador.com.br/knpyW" target="_blank" rel="noopener noreferrer">Quero de Casamento</a> 
             e <a href="https://www.precolandia.com.br/gift-list-details/view/mariana-pulis-162323" target="_blank" rel="noopener noreferrer">Precolândia</a>. 
@@ -25,13 +25,13 @@ import Heart from "../heart.astro";
             </a>
           </div>
 
-          <div class="single-brand ms-4">
+          <div class="single-brand">
             <a href="https://encurtador.com.br/knpyW" target="_blank" rel="noopener noreferrer">
               <img src="/images/logo-magazine.webp" loading="lazy" alt="Lista de presente de casamento da Magazine Luiza" />
             </a>
           </div>
 
-          <div class="single-brand ms-4">
+          <div class="single-brand">
             <a href="https://www.precolandia.com.br/gift-list-details/view/mariana-pulis-162323" target="_blank" rel="noopener noreferrer">
               <img src="/images/precolandia.webp" loading="lazy" alt="Lista de presente na Precolândia" />
             </a>
@@ -45,6 +45,32 @@ import Heart from "../heart.astro";
 <style lang="scss">
   .wedding-gifts {
     padding: 60px 0;
+
+    &__title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+
+    @media(max-width: 768px) {
+      padding: 40px 0;
+    }
+
+    @media(max-width: 480px) {
+      padding: 20px 0;
+    }
+
+    &__block {
+      text-align: center;
+      margin-bottom: 80px;
+
+      @media(max-width: 768px) {
+        margin-bottom: 40px;
+      }
+
+      @media(max-width: 480px) {
+        margin-bottom: 20px;
+      }
+    }
   }
 
   .brand-active {
@@ -57,5 +83,24 @@ import Heart from "../heart.astro";
     }
   }
 
-  .single-brand img { max-width: 100%; }
+  .single-brand {
+
+    &:nth-child(2n) {
+      margin: 0 1.5rem;
+
+      @media(max-width: 480px) {
+        margin: 10px 0;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media(max-width: 480px) {
+      margin-left: 0;
+    }
+  }
+  
 </style>

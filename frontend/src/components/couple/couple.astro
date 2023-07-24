@@ -25,19 +25,17 @@ import Heart from '../heart.astro';
 			</div>
 
 			<div class="col-md-6 d-flex flex-column justify-content-center">
-        <div class="banner-text light small">
+        <div class="couple__content">
           <h3 class="couple__subtitle">O noivo</h3>
-          <p class="couple-excerpt animation">
+          <p class="couple-excerpt">
             Oi! Eu sou o <strong>Bruno</strong>, tenho 34 anos e moro em BH e claro que torço pelo Galo. 
             Sou programador e luto pela acessibilidade digital. 
             Amo pensar, escrever, ler e falar sobre a vida, teologia e organização. 
             Nas horas vagas me aventuro no violão flamenco. 
             Conto com sua presença no dia mais importante de nossas vidas!
           </p>
-        </div>
-
-        <div class="banner-text light small">
-          <h3 class="couple__subtitle ">A noiva</h3>
+ 
+          <h3 class="couple__subtitle">A noiva</h3>
           <p class="couple-excerpt">
             Sou a <strong>Mariana</strong> tenho 30 anos e sou de Petrópolis - RJ. 
             Sou muito habilidosa e criativa com crochê. 
@@ -55,15 +53,37 @@ import Heart from '../heart.astro';
     padding: 140px 0;
 
     &__title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
       font-size: 40px;
       margin: 20px 0;
-      text-transform: uppercase;
+      text-transform: capitalize;
+      letter-spacing: 1px;
     }
 
     &__subtitle {
+      font-family: 'Playfair Display', serif;
       font-size: 30px;
       color: var(--olive);
       font-weight: 800;
+    }
+
+    @media(max-width: 768px) {
+      padding: 50px 0;
+    }
+
+    @media(max-width: 480px) {
+      padding: 20px 0;
+    }
+
+    &__content {
+      @media(max-width: 768px) { 
+        padding-top: 40px;
+      }  
+
+      @media(max-width: 480px) { 
+        padding-top: 20px;
+      }  
     }
   }
 
