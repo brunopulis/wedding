@@ -1,9 +1,161 @@
 ---
 import Layout from '../layouts/Page.astro';
 import HeroInner from '../components/hero/hero-inner.astro';
+import RegistryGift from 'components/registry-gift/registry-gift.astro';
+import Moments from '../components/moments/moments.astro';
 import Map from 'components/map/map.astro';
 
 const { title } = Astro.props;
+
+let images = [
+  {
+    id: 0,
+    webp: '../images/gallery/webp/4.webp',
+    jpg: '../images/gallery/jpg/4.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 1,
+    webp: '../images/gallery/webp/12.webp',
+    jpg: '../images/gallery/jpg/12.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 2,
+    webp: '../images/gallery/webp/13.webp',
+    jpg: '../images/gallery/jpg/13.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 3,
+    webp: '../images/gallery/webp/14.webp',
+    jpg: '../images/gallery/jpg/14.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 4,
+    webp: '../images/gallery/webp/17.webp',
+    jpg: '../images/gallery/jpg/17.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 5,
+    webp: '../images/gallery/webp/20.webp',
+    jpg: '../images/gallery/jpg/20.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 6,
+    webp: '../images/gallery/webp/23.webp',
+    jpg: '../images/gallery/jpg/23.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 7,
+    webp: '../images/gallery/webp/29.webp',
+    jpg: '../images/gallery/jpg/29.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 8,
+    webp: '../images/gallery/webp/49.webp',
+    jpg: '../images/gallery/jpg/49.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 9,
+    webp: '../images/gallery/webp/53.webp',
+    jpg: '../images/gallery/jpg/53.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 10,
+    webp: '../images/gallery/webp/57.webp',
+    jpg: '../images/gallery/jpg/57.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 11,
+    webp: '../images/gallery/webp/60.webp',
+    jpg: '../images/gallery/jpg/60.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 12,
+    webp: '../images/gallery/webp/62.webp',
+    jpg: '../images/gallery/jpg/62.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 13,
+    webp: '../images/gallery/webp/64.webp',
+    jpg: '../images/gallery/jpg/64.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 14,
+    webp: '../images/gallery/webp/68.webp',
+    jpg: '../images/gallery/jpg/68.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 15,
+    webp: '../images/gallery/webp/72.webp',
+    jpg: '../images/gallery/jpg/72.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 16,
+    webp: '../images/gallery/webp/78.webp',
+    jpg: '../images/gallery/jpg/78.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 17,
+    webp: '../images/gallery/webp/81.webp',
+    jpg: '../images/gallery/jpg/81.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 18,
+    webp: '../images/gallery/webp/85.webp',
+    jpg: '../images/gallery/jpg/85.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 19,
+    webp: '../images/gallery/webp/87.webp',
+    jpg: '../images/gallery/jpg/87.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+  {
+    id: 20,
+    webp: '../images/gallery/webp/92.webp',
+    jpg: '../images/gallery/jpg/92.jpg',
+    shortAlt: 'Teste imagem',
+    longAlt: 'Teste da imagem bonita'
+  },
+]
 ---
 
 <Layout title="Mariana e Bruno - Galeria de Fotos">
@@ -15,56 +167,51 @@ const { title } = Astro.props;
         <div class="col-xl-12">
           <div class="wrapper">
             <h2 class="section-tittle text-center" id="our-history-title">Galeria de fotos</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris  </p>
+            <p>
+              É com grande alegria que compartilhamos com vocês os momentos mágicos e inesquecíveis que antecedem o nosso grande dia. 
+              Convidamos vocês a embarcarem conosco em uma jornada repleta de amor e cumplicidade, através de uma encantadora galeria de fotos do nosso <span lang="en">Pré-Wedding</span>.
+            </p>
           </div>
         </div>
       </div>
 
       <div class="row d-flex justify-content-center">
-        <article class="col-md-4">
-          <img src="./images/photo-4.webp" loading="lazy" alt="">
-        </article>
-        <article class="col-md-4">
-          <img src="./images/photo-4.webp" loading="lazy" alt="">
-        </article>
-        <article class="col-md-4">
-          <img src="./images/photo-4.webp" loading="lazy" alt="">
-        </article>
-        <article class="col-md-4">
-          <img src="./images/photo-4.webp" loading="lazy" alt="">
-        </article>
-        <article class="col-md-4">
-          <img src="./images/photo-4.webp" loading="lazy" alt="">
-        </article>
-        <article class="col-md-4">
-          <img src="./images/photo-4.webp" loading="lazy" alt="">
-        </article>
-        <article class="col-md-4">
-          <img src="./images/photo-4.webp" loading="lazy" alt="">
-        </article>
-        <article class="col-md-4">
-          <img src="./images/photo-4.webp" loading="lazy" alt="">
-        </article>
-        <article class="col-md-4">
-          <img src="./images/photo-4.webp" loading="lazy" alt="">
-        </article>
-        <article class="col-md-4">
-          <img src="./images/photo-4.webp" loading="lazy" alt="">
-        </article>
-        <article class="col-md-4">
-          <img src="./images/photo-4.webp" loading="lazy" alt="">
-        </article>
-        <article class="col-md-4">
-          <img src="./images/photo-4.webp" loading="lazy" alt="">
-        </article>
+        {
+          images.map(image => (
+            <article class="our-history__item col-md-4">
+              <picture>
+                <source srcset={image.webp} type="image/webp">
+                <source srcset={image.jpg} type="image/jpeg">
+                <img src={image.jpg} class="img-fluid" alt={image.shortAlt} aria-describedby={`desc-${image.id}`} loading="lazy">
+              </picture>
+              <div class="visually-hidden" id={`desc-${image.id}`}>
+                <p>{image.longAlt}</p>
+              </div>
+            </article>
+          ))
+        }
       </div>
     </div>    
   </section>
+  <RegistryGift />
+  <Moments/>
   <Map />
 </Layout>
 
 <style lang="scss">
   .our-history {
     padding: 120px 0;
+
+    &__item {
+      margin-bottom: 25px;
+    }
+
+    @media(max-width: 768px) {
+      padding: 50px 0;
+    }
+
+    @media(max-width: 480px) {
+      padding: 20px 0;
+    }
   }
 </style>
