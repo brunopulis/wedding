@@ -1,6 +1,7 @@
 ---
 import '../styles/style.scss';
 import HeadMeta from '../components/settings/head-meta.astro';
+import SkipLinks from '../components/skip-links/skip-links.astro';
 import Header from '../components/header/header.astro';
 import Footer from '../components/footer/footer.astro';
 
@@ -15,6 +16,7 @@ export interface Props {
     <HeadMeta />
 	</head>
 	<body>
+    <SkipLinks />
     <Header />
     <main class="site-main" id="main-content">
 		  <slot />
