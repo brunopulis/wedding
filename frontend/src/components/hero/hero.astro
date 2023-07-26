@@ -5,10 +5,8 @@
         <div class="row d-flex align-items-center">
           <div class="col-xl-8 col-lg-6 col-md-8">
             <div class="overflow-hidden">
-              <span class="hero__date">14 de outubro</span>
-              <h1 class="hero__title">
-                Mariana <strong aria-label="e">&amp;</strong> Bruno
-              </h1>
+              <time datetime="2023-10-14" class="hero__date">14 de outubro</time>
+              <h1 class="hero__title">Mariana e Bruno</h1>
               <p class="hero__text">vão se casar</p>
             </div>
           </div>
@@ -55,10 +53,12 @@
   line-height: 2.1;
   position: relative;
   text-transform: uppercase;
+
   @media only screen and (min-width: 576px) and (max-width: 767px) {
     font-size: 18px;
     margin-bottom: 7px;
   }
+
   @media (max-width: 575px) {
     font-size: 18px;
     margin-bottom: 7px;
@@ -73,7 +73,7 @@
   margin-bottom: 14px;
   margin-bottom: 30px;
   position: relative;
-  text-transform: capitalize;
+  
   &::before {
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
       right: 0;
