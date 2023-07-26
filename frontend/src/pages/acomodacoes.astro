@@ -180,7 +180,7 @@ const { title } = Astro.props;
 	/>
 
   <div id="content">
-    <section class="pt-80" id="accommodation" aria-labelledby="accommodation-title">
+    <section class="accommodation" id="accommodation" aria-labelledby="accommodation-title">
       <div class="container">
         <h2 class="section-title text-center mb-10">
           Hotéis e Pousadas <Heart/>
@@ -199,47 +199,47 @@ const { title } = Astro.props;
 
     <section aria-labelledby="next-wedding-title">
       <div class="container">
-		<div class="mb-80">
-			<h3 class="display-8 fw-7 section-title mb-10" id="next-wedding-title">Próximos a cerimônia</h3>
-			<div class="row d-flex">
-			{
-				nextEvents.map(nextEvent => (
-				<div class="col-lg-4">
-					<article class="card">
-					  <img src={nextEvent.url} class="img-fluid" loading="lazy" alt="">
-					  <div class="card-body">
-						  <a href={nextEvent.link} target="_blank" rel="noopener noreferrer">
-							  <h3 class="card-title">{nextEvent.name}</h3>
-						  </a>
-						  <p class="card-text">Distância: <strong>{nextEvent.location}</strong></p>
-					  </div>
-					</article>
-				</div>
-				))
-			}
-			</div>
-		</div>
+        <div class="mb-80">
+          <h3 class="display-8 fw-7 section-title mb-10" id="next-wedding-title">Próximos a cerimônia</h3>
+          <div class="row d-flex">
+          {
+            nextEvents.map(nextEvent => (
+            <div class="col-lg-4">
+              <article class="card">
+                <img src={nextEvent.url} class="img-fluid" loading="lazy" alt="">
+                <div class="card-body">
+                  <a href={nextEvent.link} target="_blank" rel="noopener noreferrer">
+                    <h3 class="card-title">{nextEvent.name}</h3>
+                  </a>
+                  <p class="card-text">Distância: <strong>{nextEvent.location}</strong></p>
+                </div>
+              </article>
+            </div>
+            ))
+          }
+          </div>
+        </div>
 
-		<div class="mb-80">
-			<h3 class="display-8 section-title fw-7 mb-10">Próximos ao centro</h3>
-			<div class="row d-flex justify-content-center">
-			{
-				downtowns.map(downtown => (
-				<div class="col-lg-4">
-					<article class="card">
-					<img src={downtown.url} class="img-fluid" loading="lazy" alt="">
-					<div class="card-body">
-						<a href={downtown.link} target="_blank" rel="noopener noreferrer">
-							<h3 class="card-title">{downtown.name}</h3>
-						</a>
-						<p class="card-text">Distância: <strong>{downtown.location}</strong></p>
-					</div>
-					</article>
-				</div>
-				))
-			}
-			</div>
-		</div>
+        <div class="mb-80">
+          <h3 class="display-8 section-title fw-7 mb-10">Próximos ao centro</h3>
+          <div class="row d-flex justify-content-center">
+          {
+            downtowns.map(downtown => (
+            <div class="col-lg-4">
+              <article class="card">
+              <img src={downtown.url} class="img-fluid" loading="lazy" alt="">
+              <div class="card-body">
+                <a href={downtown.link} target="_blank" rel="noopener noreferrer">
+                  <h3 class="card-title">{downtown.name}</h3>
+                </a>
+                <p class="card-text">Distância: <strong>{downtown.location}</strong></p>
+              </div>
+              </article>
+            </div>
+            ))
+          }
+          </div>
+        </div>
       </div>
     </section>
 
@@ -250,9 +250,12 @@ const { title } = Astro.props;
 </Layout>
 
 <style lang="scss">
-	.services {
-		background: var(--standard);
-	}
+  .accommodation {
+    @media(max-width: 991px) {
+      padding-top: 50px;
+    }
+  }
+
 	.services,
 	.entertainment {
 		padding: 100px 0;
@@ -266,16 +269,16 @@ const { title } = Astro.props;
 
   .card {
     margin-bottom: 20px;
-	box-shadow: 0 10px 30px 0 rgba(153, 153, 153, 0.1);
+	  box-shadow: 0 10px 30px 0 rgba(153, 153, 153, 0.1);
 
     &-title {
       font-size: 20px;
       font-weight: 700;
-	  color: var(--olive);
+	    color: var(--olive);
     }
 
-	&-body {
-		padding: 35px 30px 40px 30px;
-	}
+	  &-body {
+		  padding: 35px 30px 40px 30px;
+	  }
   }
 </style>
