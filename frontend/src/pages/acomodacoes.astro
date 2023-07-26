@@ -2,9 +2,9 @@
 import Layout from '../layouts/Page.astro';
 import HeroInner from '../components/hero/hero-inner.astro';
 import Heart from '../components/heart.astro';
-import Attractions from '../components/attractions/attractions.astro';
 import Map from '../components/map/map.astro';
 import Services from 'components/services/services.astro';
+import Moments from 'components/moments/moments.astro';
 import Entertainment from 'components/entertainment/entertainment.astro';
 
 
@@ -245,21 +245,19 @@ const { title } = Astro.props;
 
     <Services />
     <Entertainment />
+    <Moments/>
     <Map />
   </div>
 </Layout>
 
 <style lang="scss">
   .accommodation {
+    padding: 120px 0;
+
     @media(max-width: 991px) {
-      padding-top: 50px;
+      padding: 50px 0 0 0;
     }
   }
-
-	.services,
-	.entertainment {
-		padding: 100px 0;
-	}
 
 	.section-title {
 		color: var(--olive);
