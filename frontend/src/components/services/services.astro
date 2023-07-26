@@ -1,7 +1,65 @@
 ---
 import Heart from 'components/heart.astro';
+
+let makeups = [
+  {
+    name: 'Vanessa Klein',
+    instagram: 'https://www.instagram.com/vanessakleinbeauty/',
+    whatsapp: 'https://api.whatsapp.com/send?phone=5524992771038'
+  },
+
+  {
+    name: 'Brenda Britto',
+    instagram: 'https://www.instagram.com/kamylemarquesmaquiadora',
+    whatsapp: 'https://api.whatsapp.com/send/?phone=5524992822840'
+  },
+
+  {
+    name: 'Kamyle Marques',
+    instagram: 'https://www.instagram.com/kamylemarquesmaquiadora',
+    whatsapp: 'https://api.whatsapp.com/send/?phone=5524992822840'
+  },
+
+  {
+    name: 'Isadora Lima Rosa',
+    instagram: 'https://www.instagram.com/isadoralimarosa',
+    whatsapp: 'https://api.whatsapp.com/send?phone=5524981237879'
+  },
+
+  {
+    name: 'Natália Sixel',
+    instagram: 'https://www.instagram.com/sixelmakeup/',
+    whatsapp: 'https://api.whatsapp.com/send?phone=5521982173750'
+  },
+
+  {
+    name: 'Bárbara Bull',
+    instagram: 'https://www.instagram.com/barbarabullmakeup/',
+    whatsapp: 'https://api.whatsapp.com/send/?phone=5524981574550'
+  },
+];
+
+let barbers = [
+  {
+    name: 'Plínio Botelho',
+    instagram: 'https://www.instagram.com/barbeiropliniobotelho/',
+    whatsapp: 'https://api.whatsapp.com/send?phone=5524992599417'
+  },
+
+  {
+    name: 'Diego Tinoco',
+    instagram: 'https://www.instagram.com/domtinoco_barbearia/',
+    whatsapp: 'https://api.whatsapp.com/send?phone=5524988070131'
+  },
+
+  {
+    name: 'Brooklyn 195',
+    instagram: 'https://www.instagram.com/brooklyn__195/',
+    whatsapp: 'https://api.whatsapp.com/send?phone=5524992897717'
+  },
+]
 ---
-<section class="services mb-80" id="services" aria-labelledby="services-title">
+<section class="services" id="services" aria-labelledby="services-title">
   <div class="container">
     <div class="row">
       <div class="col-xl-12 text-center">
@@ -9,22 +67,91 @@ import Heart from 'components/heart.astro';
         <Heart />
       </div>
     </div>
+
+    <div class="service-content">
+			<h3 class="display-8 section-title fw-7 mb-10">Maquiagem e penteado</h3>
+			<div class="row d-flex justify-content-center">
+        {
+          makeups.map(makeup => (
+          <div class="col-lg-4">
+            <article class="card">
+              <picture>
+                <source srcset="/images/services/makeup.webp" type="image/webp">
+                <source srcset="/images/services/makeup.jpg" type="image/jpeg">
+                <img class="card-img-top" src="/images/services/makeup.jpg" alt="" loading="lazy" />
+              </picture>
+              
+              <div class="card-body">
+                <a href={makeup.instagram} target="_blank" rel="noopener noreferrer">
+                  <h3 class="card-title">{makeup.name}</h3>
+                </a>
+                <p class="card-text">
+                  <a href={makeup.whatsapp}>Entrar em contato</a>
+                </p>
+              </div>
+            </article>
+          </div>
+          ))
+        }
+			</div>
+		</div>
+
+    <div class="service-content">
+			<h3 class="display-8 section-title fw-7 mb-10">Barbearia</h3>
+			<div class="row d-flex justify-content-center">
+        {
+          barbers.map(barber => (
+          <div class="col-lg-4">
+            <article class="card">
+              <picture>
+                <source srcset="/images/services/barber.webp" type="image/webp">
+                <source srcset="/images/services/barber.jpg" type="image/jpeg">
+                <img class="card-img-top" src="/images/services/barber.jpg" alt="" loading="lazy" />
+              </picture>
+              
+              <div class="card-body">
+                <a href={barber.instagram} target="_blank" rel="noopener noreferrer">
+                  <h3 class="card-title">{barber.name}</h3>
+                </a>
+                <p class="card-text">
+                  <a href={barber.whatsapp}>WhatsApp do Profissional</a>
+                </p>
+              </div>
+            </article>
+          </div>
+          ))
+        }
+			</div>
+		</div>
   </div>
 </section>
 
 <style lang="scss">
   .services {
     background: var(--standard);
-  }
-  .services,
-  .entertainment {
     padding: 100px 0;
+
+    @media(max-width: 768px) {
+      padding: 40px 0 0 0;
+    }
+  }
+
+  service-content {
+    margin-bottom: 80px;
+
+    @media(max-width: 768px) {
+      margin-bottom: 20px;
+    }
   }
 
   .section-title {
     color: var(--olive);
     font-weight: 700;
     margin-bottom: 10px;
+
+    @media(max-width: 768px) {
+      margin: 20px 0;
+    }
   }
 
   .card {
